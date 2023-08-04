@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <style>
+        .change:hover{
+            background: transparent;
+            
+        }
+        
+              </style>  
+              
+              <style>
+                @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Khand:wght@700&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital@1&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+                  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+                  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600&family=PT+Sans+Narrow:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap');
+                  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600&family=PT+Sans+Narrow:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap');
+                  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600;700&family=PT+Sans+Narrow:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap');
+                .acme{
+            
+                  font-family: 'PT Sans Narrow', sans-serif;
+            
+                }
+            
+                .carousel-header{
+                  font-family: 'Roboto', sans-serif;
+                }
+            
+                .carousel-p{
+                  font-family: 'Mukta', sans-serif;
+                  color:gray;
+                }
+            
+                .name{
+                  font-family: 'Lato', sans-serif;
+                }
+            
+                .site{
+                  font-family: 'Righteous', cursive;
+                }
+            
+                .headings{
+                  font-family: 'Quattrocento Sans', sans-serif;
+                }
+            .mul-text{
+              font-family: 'Khand', sans-serif;
+            }
+            
+                .scrolling-active{
+                  background:#22243b;
+                  box-shadow:0 3px 1rem rgba(0,0,0,.1);
+                }
+        
+        
+                input{
+                    background-color: beige;
+                    color:black;
+                }
+                </style>
+</head>
+
+<body>
+            <div class="container-fluid" style="margin-top: 8em;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-title ">
+                                <h4>{{Action}} History -- {{win}}</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="trade-history-table">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                           
+                                                <tr>
+                                                    <th>Price($)</th>
+                                                   
+                                                    <th>Date</th>
+                                                      <th>Status</th>
+                                                      <th>Action</th>
+                                                          
+                                                </tr>
+                                            
+                                            </thead>
+                                            <tbody>
+                                             {% for obj in history %}
+                                                <tr>
+                                                    <td class="text-success">{{obj.amount}}</td>
+                                                    
+                                                    
+                                                    <td>{{obj.date}}</td>
+                                           {% if obj.status %}
+                                                     <td>Approved</td>
+                                                     {% endif %}
+                                                      <td class="text-success">{{obj.action}}</td>
+
+                                                </tr>
+
+                                                {% empty %}
+                                                No data yet
+                                         {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </body>
+                </html>

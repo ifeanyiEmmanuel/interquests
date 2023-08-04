@@ -1,0 +1,381 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-24 02:22+0100\n"
+"PO-Revision-Date: 2022-04-24 02:48+0000\n"
+"Last-Translator:   <iifeanyi570@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\mywebsite\settings.py:283
+msgid "German"
+msgstr "Alemán"
+
+#: .\mywebsite\settings.py:284
+msgid "French"
+msgstr "Francés"
+
+#: .\mywebsite\settings.py:285
+msgid "English"
+msgstr "inglés"
+
+#: .\mywebsite\settings.py:286
+msgid "Spanish"
+msgstr "español"
+
+#: .\mywebsite\urls.py:22
+msgid "admin/"
+msgstr "administración/"
+
+#: .\mywebsite\views.py:28 .\templates\homepage.html:320
+#: .\templates\homepage.html:1481
+msgid "Home"
+msgstr ""
+
+#: .\mywebsite\views.py:53
+msgid "home"
+msgstr ""
+
+#: .\templates\homepage.html:324
+msgid "Testimonies"
+msgstr ""
+
+#: .\templates\homepage.html:332
+msgid "Select Language"
+msgstr "Seleccione el idioma"
+
+#: .\templates\homepage.html:345
+msgid "Payment Proof"
+msgstr "Prueba de pago"
+
+#: .\templates\homepage.html:349
+msgid "Support"
+msgstr "Apoyo"
+
+#: .\templates\homepage.html:352 .\templates\homepage.html:1508
+#: .\templates\homepage.html:1514
+msgid "Contact Us"
+msgstr "Contáctenos"
+
+#: .\templates\homepage.html:357 .\templates\homepage.html:394
+msgid "Dashboard"
+msgstr "Panel"
+
+#: .\templates\homepage.html:358 .\templates\homepage.html:395
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: .\templates\homepage.html:360 .\templates\homepage.html:397
+#: .\templates\homepage.html:418 .\templates\homepage.html:440
+msgid "Login"
+msgstr "Acceso"
+
+#: .\templates\homepage.html:361 .\templates\homepage.html:398
+#: .\templates\homepage.html:419 .\templates\homepage.html:441
+msgid "Sign Up"
+msgstr "Inscribirse"
+
+#: .\templates\homepage.html:383
+msgid "Your Revolutionary"
+msgstr "tu revolucionario"
+
+#: .\templates\homepage.html:383
+msgid "Bitcoin Investment"
+msgstr "Inversión Bitcoin"
+
+#: .\templates\homepage.html:385
+msgid ""
+"\n"
+"          We offer three reliable investment plans.\n"
+"          Also you can earn more profit by refering your friend, and family.\n"
+"          No investment required, can get up to "
+msgstr ""
+"\n"
+"Ofrecemos tres planes de inversión confiables.\n"
+"También puede obtener más ganancias al recomendar a su amigo y familia.\n"
+"No requiere inversión, puede llegar hasta"
+
+#: .\templates\homepage.html:388
+msgid ""
+"ref comissions.what are you waiting for ? create a free account and start refering the world.\n"
+"          "
+msgstr ""
+"comisiones de ref. ¿qué estás esperando? crea una cuenta gratis y comienza a"
+" recomendar al mundo."
+
+#: .\templates\homepage.html:406 .\templates\homepage.html:428
+msgid "Your Revolutionary <br>Bitcoin Investment"
+msgstr "Su inversión revolucionaria en Bitcoin"
+
+#: .\templates\homepage.html:408
+msgid ""
+" interquests is a private investment company incorporated in the UK.\n"
+"          Our team consists of professionals at all levels of the blockchain.\n"
+"          The main business involves cryptocurrency mining and intelligent automated trading,\n"
+"          bringing stable and efficient revenue to our global customers,\n"
+"          interquests's company registration number 69590835.. "
+msgstr ""
+"interquests es una sociedad de inversión privada constituida en el Reino Unido.\n"
+"Nuestro equipo está formado por profesionales en todos los niveles de la cadena de bloques.\n"
+"El negocio principal implica la minería de criptomonedas y el comercio automatizado inteligente,\n"
+"traer ingresos estables y eficientes a nuestros clientes globales,\n"
+"número de registro de empresa de interquests 69590835.."
+
+#: .\templates\homepage.html:415 .\templates\homepage.html:437
+msgid "Dashboard<"
+msgstr "Panel"
+
+#: .\templates\homepage.html:416 .\templates\homepage.html:438
+msgid " Logout"
+msgstr "Cerrar sesión"
+
+#: .\templates\homepage.html:429
+msgid ""
+"Welcome to interquests.com\n"
+"          interquests.com is a online investment platform,We're a legally company registered in the  Wales,United Kingdom\n"
+"          We are experienced team with high qualification and efficiency,\n"
+"          provided for an investment service focus on the Bitcoin trading market\n"
+"         interquests.com helps you earn stable and fast profit online\n"
+"          Don't delay! Join interquests Now! "
+msgstr ""
+"Bienvenido a interquests.com\n"
+"interquests.com es una plataforma de inversión en línea, somos una empresa registrada legalmente en Gales, Reino Unido\n"
+"Somos un equipo experimentado con alta calificación y eficiencia,\n"
+"proporcionado para un servicio de inversión centrado en el mercado de comercio de Bitcoin\n"
+"interquests.com lo ayuda a obtener ganancias estables y rápidas en línea\n"
+"¡No se demore! ¡Únete a los interquests ahora!"
+
+#: .\templates\homepage.html:494
+msgid "About Us"
+msgstr "Sobre nosotros"
+
+#: .\templates\homepage.html:516
+msgid "Read more"
+msgstr "Lee mas"
+
+#: .\templates\homepage.html:538
+msgid "investment plan"
+msgstr "Plan de inversión"
+
+#: .\templates\homepage.html:581
+msgid "roi Daily"
+msgstr "roi diario"
+
+#: .\templates\homepage.html:583
+msgid "Min-Deposit:"
+msgstr "Depósito mínimo:"
+
+#: .\templates\homepage.html:584
+msgid "Max-Deposit:"
+msgstr "Depósito máximo:"
+
+#: .\templates\homepage.html:585
+msgid "Ref-Commission:"
+msgstr "Ref-Comisión:"
+
+#: .\templates\homepage.html:586
+msgid "Instant Payment:"
+msgstr "Pago instantáneo:"
+
+#: .\templates\homepage.html:587
+msgid "Withdrawal Period:"
+msgstr "Tiempo de espera:"
+
+#: .\templates\homepage.html:593
+msgid "Account"
+msgstr "Cuenta"
+
+#: .\templates\homepage.html:639
+msgid "percentage"
+msgstr "porcentaje"
+
+#: .\templates\homepage.html:641
+msgid "Total percentage MIN"
+msgstr "Porcentaje total MÍN."
+
+#: .\templates\homepage.html:645
+msgid "earnings"
+msgstr "ganancias"
+
+#: .\templates\homepage.html:658
+msgid "Choose a Plan"
+msgstr "Elige un plan"
+
+#: .\templates\homepage.html:659
+msgid "after 24Hours"
+msgstr "después de 24 horas"
+
+#: .\templates\homepage.html:660
+msgid "after 48Hours "
+msgstr "después de 48 horas"
+
+#: .\templates\homepage.html:661
+msgid "after  72Hours "
+msgstr "después de 72 horas"
+
+#: .\templates\homepage.html:662
+msgid "after 120Hours "
+msgstr "después de 120 horas"
+
+#: .\templates\homepage.html:700
+msgid "Our Investment"
+msgstr "Nuestra inversión"
+
+#: .\templates\homepage.html:703
+msgid "Statistics"
+msgstr "Estadísticas"
+
+#: .\templates\homepage.html:717
+msgid "Running Days"
+msgstr "Días de funcionamiento"
+
+#: .\templates\homepage.html:733
+msgid "Total Deposits"
+msgstr "Depósitos totales"
+
+#: .\templates\homepage.html:749
+msgid "Total Withdraw"
+msgstr "Retiro Total"
+
+#: .\templates\homepage.html:764
+msgid "Total Accounts"
+msgstr "Cuentas totales"
+
+#: .\templates\homepage.html:922
+msgid "Latest Deposits"
+msgstr "Últimos depósitos"
+
+#: .\templates\homepage.html:1099
+msgid "Latest Withdrawals "
+msgstr "Últimos retiros"
+
+#: .\templates\homepage.html:1288
+msgid "Our advantage"
+msgstr "Nuestra ventaja"
+
+#: .\templates\homepage.html:1307
+msgid "customer feedback"
+msgstr "comentarios de los clientes"
+
+#: .\templates\homepage.html:1310
+msgid "WHAT OUR CLIENT SAYS"
+msgstr "LO QUE DICE NUESTRO CLIENTE"
+
+#: .\templates\homepage.html:1392
+msgid "Top Investors"
+msgstr "Principales inversores"
+
+#: .\templates\homepage.html:1399 .\templates\homepage.html:1420
+#: .\templates\homepage.html:1439 .\templates\homepage.html:1457
+msgid "More Info"
+msgstr "Más información"
+
+#: .\templates\homepage.html:1414
+msgid "last investors"
+msgstr "últimos inversores"
+
+#: .\templates\homepage.html:1433
+msgid "investors stats"
+msgstr "estadísticas de inversores"
+
+#: .\templates\homepage.html:1450
+msgid "last withdrawals"
+msgstr "últimos retiros"
+
+#: .\templates\homepage.html:1473
+msgid ""
+"\n"
+"  The Company\n"
+"INTERQUESTS is a private investment company incorporated in Wales.The main business involves cryptocurrency mining and intelligent automated trading, bringing stable and efficient revenue to our global customers.\n"
+"        "
+msgstr ""
+"\n"
+"La empresa\n"
+"INTERQUESTS es una empresa de inversión privada constituida en Gales. El negocio principal consiste en la minería de criptomonedas y el comercio automatizado inteligente, lo que brinda ingresos estables y eficientes a nuestros clientes globales."
+
+#: .\templates\homepage.html:1479
+msgid "Quick Links"
+msgstr "enlaces rápidos"
+
+#: .\templates\homepage.html:1482
+msgid "About"
+msgstr "Acerca de"
+
+#: .\templates\homepage.html:1489
+msgid "Buy Bitcoins"
+msgstr "comprar bitcoins"
+
+#: .\templates\homepage.html:1501
+msgid "Help"
+msgstr "Ayudar"
+
+#: .\templates\homepage.html:1516
+msgid ""
+"\n"
+"          Phone Only For Vip\n"
+"\n"
+"          admin@interquests.com\n"
+"          \n"
+"          411 Oxford Street, Office 1.01,\n"
+"          \n"
+"          London, England,\n"
+"          \n"
+"          W1C 2PE\n"
+"        "
+msgstr ""
+"\n"
+"Teléfono solo para vip\n"
+"\n"
+"admin@interquests.com\n"
+"\n"
+"411 Oxford Street, Oficina 1.01,\n"
+"\n"
+"Londres, Inglaterra,\n"
+"\n"
+"W1C 2PE"
+
+#: .\templates\homepage.html:1561
+msgid "All rights reserved."
+msgstr "Reservados todos los derechos."
+
+#: .\templates\homepage.html:1563
+msgid "Terms & Conditions"
+msgstr "Términos y condiciones"
+
+#: .\templates\homepage.html:1563
+msgid "Privacy Policy"
+msgstr "Política de privacidad"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "          \n"
+#~ "                  <button class=\"ui inverted teal button text-uppercase fs-3\">%(plan.roi)s%% roi Daily</button>\n"
+#~ "                  <button class=\"btn btn-transparent text-white text-uppercase fw-bolder fs-4\"  type=\"button\"><b style=\"color:#021930\"></b>%(plan.plan_type)s</button><hr>\n"
+#~ "                  <button class=\"btn btn-transparent text-white text-uppercase\" type=\"button\">Min-Deposit: <span>$%(plan.min_deposit)s</span></button><hr>\n"
+#~ "                  <button class=\"btn btn-transparent text-white text-uppercase\" type=\"button\">Max-Deposit: <span>$%(plan.max_deposit)s</span></button><hr>\n"
+#~ "                  <button class=\"btn btn-transparent text-white text-uppercase\" type=\"button\">Ref-Commission: <span>%(plan.Referral)s%%</span></button><hr>\n"
+#~ "                  <button class=\"btn btn-transparent text-white text-uppercase\" type=\"button\">Instant Payment: <span>YES</span></button><hr>\n"
+#~ "                  <button class=\"btn btn-transparent text-white text-uppercase\" type=\"button\">Withdrawal Period: <span>%(plan.withdrawal_period)s</span></button><hr>\n"
+#~ "  \n"
+#~ "                </div>\n"
+#~ "              </div>\n"
+#~ "            </div>\n"
+#~ "          \n"
+#~ "              <button class=\"btn btn-transparent text-white  text-uppercase text-center account\"  type=\"button\">Account <span><i class=\"arrow right icon\"></i></span></button>\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "diario"

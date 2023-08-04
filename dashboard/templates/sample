@@ -1,0 +1,42 @@
+<figure class="figure">
+  <img src="{{wallet_image.url}}" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption fs-6 text-white notice fw-bold p-1" id="address_field">{{wallet_address}}</figcaption>
+</figure>
+<div class="card-body">
+  <div class="text-center mb-3">
+    <button class="btn btn-outline-success me-2" id="copy"  onclick="myFunction()">Copy address <i class="fa-regular fa-copy"></i> </button> 
+    
+  </div>
+  <div class="text-center mb-2">
+    
+  <button class="btn btn-outline-success">Save QR Code <i class="fa-solid fa-arrow-down"></i></button>
+  </div>
+
+  <div class="card-header fw-bolder fs-5">
+    Notice:
+  </div>
+  <ul class="notice">
+    
+    <li class="notice fs-6 lh-lg"><i class="fa-solid fa-star-of-life"></i> The address is not allowed to deposit other assets other than , and any other asset deposit will not be recovered.</li>
+    <li class="notice fs-6 lh-lg"><i class="fa-solid fa-star-of-life"></i> The deposit transaction will be automatic,and the  transfer wiil need to be confirmed by th entire  network. After 2 confirmations, your token will be automatically deposited to your account.</li>
+    
+  </ul>
+</div>
+
+
+
+
+function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("address_field");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+    
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Login </title>
+  <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+  <!-- Semantic ui  styles -->
+  <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/segment.min.css" integrity="sha512-gB76JkasK0JAoGNuCBlOkok1MvhWe+VlcMQev9kU1qdkHaniPRHCOLEX6I8e1RATv/Y8uEhkDENL/ct2446l0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/divider.min.css" integrity="sha512-oVjlQ44wbePOJ4mK1reaPNn45WUnBnieWk5VgVCC15MnZXhu8/F/LkLlhHmwMYJs+B/UK+PyuGlFQPYe02StSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/button.min.css" integrity="sha512-+1Zl+cDrkWiaN4aCOs9XZ12Jm4Lg3OztufLITILSxr3mo5QM3+WgLH6+s+ytIWoWWQcdNlMGn1JHf75TzHvPHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/list.min.css" integrity="sha512-Tat6lTtm97uLVi5uZWwKypcmT4b1wT/k/qoFWDI6aNTYBFGkJyxlkpXFA39iOjYNAsVIlWTlZ2xpzkXtZbI70w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/message.min.css" integrity="sha512-cjnERD52Jzybv22NT1ZzuxP8WXHCotGJLY+Z/mRSUB+KKk4pyHFX2M48owbs3hyaa0ZPyZw99x9orcExrxv/zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/accordion.min.css" integrity="sha512-EW5NoIdxRt4Kx9yB4sh9TKVYOveAOFf8WwjRwQs4ylh1hDueujFGLJtPNjm4zQKwlPk8Q2mYDLte7aK6NS+uoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/dropdown.min.css" integrity="sha512-tdyzfjYDk2OR9L10jvzzuGUB0Rvl5fyMW/Z8yfbYyyENfuXxtcDtEq7d/PdiA0hzQzXjWwvZasjEp8Joli2tkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/reset.min.css" integrity="sha512-4oi+quFCpWrFqNtLmv0A56oLa8Br7PQ//DkMffNgO18cgxjWmVOuyPwZJlTAbpS9SYLDoGAxtg90EsMbjTSqcw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/site.min.css" integrity="sha512-yEmNIS6Qdu0YdnkjO1ESV2WOq8ZrFyUCv11SyHSpiTWNq8wzH9IXV2cpfCoYzVnJ7N6TsWoRolz59B8n4yB0TQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/container.min.css" integrity="sha512-IUhIc6Zv/UBzmK9W+2PBOw2DHH/E0MviFQWNYIqisFosYiBuhtd6CHTHI2Oy+vFpkdjFyV4pDVWOZfAQnZmHew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/grid.min.css" integrity="sha512-Ohj+DnL1EK4rLz1ZmdJ2XkqFUk8QtUKU/z5p0GA11OrkB8b1aEC8083wIapgpP/dj1E+MClxAYdUnmTY3rbFCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/header.min.css" integrity="sha512-GtOUyBaHQA3ECV4UL3DDSPfy0dwqrk0BNqKB/Bgd/aJdeZKIpLbQHvdi6Sp11/PBhYas4HH7KgcTZMwKjL8V2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/image.min.css" integrity="sha512-UyxQPvi+GFBMko3Ngv8JWOwJBcPsMiBLfCOFLtjab7+PEbyZJQzZpCmvDUaTVgmt33Lz1zGJ+R8V6Q6+5vqx8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/input.min.css" integrity="sha512-/2SPb+/ufZ1JxqZtjgwhYh6Eg0/rh9IDNjjfPyhJQEeXGRsi8bu7dpI8i2hoGaK4m8iRMvn2L7vBrAy5MdW76A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/menu.min.css" integrity="sha512-vzV6GDUGaQ3ern46f/02MP4pQhI5Fs4z4dN+0pSNiD4zuPE6Aaxzj9o8ZPTSTIQOBEI3H8wO1V8qV1bQbZcGzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/modal.min.css" integrity="sha512-O+9HCSTa58q6mrPxDvnNqBc7sPkqC7ByndUgWVMa65B5Y0jRztCrdiIZAEmAee/0+oYpyjNQwj0d4qIaLbNJuQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/icon.min.css" integrity="sha512-rTyypI20S663Wq9zrzMSOP1MNPHaYX7+ug5OZ/DTqCDLwRdErCo2W30Hdme3aUzJSvAUap3SmBk0r5j0vRxyGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+  <script src="assets/library/jquery.min.js"></script>
+
+
+  <style type="text/css">
+    body {
+      background-color: #DADADA;
+    }
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+  </style>
+  </head>
+<body>
+  <header>
+    <nav class="navbar bavbar-expand-lg navbar-dark bg-dark">
+        <div class="col-sm">
+            <a class="navbar-brand flex-grow-1" id="navbar-content">
+               
+               &nbsp;<i class="text-warning fas fa-chart-pie"></i>&nbsp;&nbsp; Interquests
+               
+            </a>
+        </div>
+         <!-- Link to navigate between the pages -->
+        {% block link %}
+<a href="{% url 'home' %}" style="margin-right:25px; font-size: 25px;" title="Go back">
+<i class="text-warning fas fa-angle-double-left"></i>
+</a>
+        {% endblock link %}
+    </nav>
+</header>
+<div class="ui middle aligned center aligned grid m-1">
+  <div class="column">
+    <i class="ui teal inverted fas fa-chart-pie fa-2x"></i><h2>Log-in to your account</h2> 
+    
+    {% load bootstrap5 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+    <form class="ui large form" method="post">
+      {% csrf_token %}
+      {% bootstrap_form_errors form  %}
+      
+     
+      <div class="ui stacked segment">
+        <div class="field">
+        
+          <div class="ui left icon input">
+          
+            <i class="user icon"></i>
+          {{form.username}}
+          </div>
+        </div>
+        <div class="field">
+          
+          <div class="ui left icon input">
+            {{form.password.errors}}
+            <i class="lock icon"></i>
+           {{form.password}}
+          </div>
+        </div>
+      <input type="submit" class="ui fluid large teal submit button mb-2" value="Login">
+      
+       <small>By continuing, you agree to Interquests's Conditions of Use and Privacy Notice.</small>
+      </div>
+
+     </form>
+    Forgot password?<a href="{% url 'password_reset' %}" class=" ms-2">click here</a>
+   
+
+    <div class="ui message">
+     <a href="{% url 'register' %}">Create your Interquests account</a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document)
+    .ready(function() {
+      $('.ui.form').form({
+          fields: {
+            username: {
+              identifier  : 'username',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your e-mail'
+                },
+                {
+                  type   : 'email',
+                  prompt : 'Please enter a valid e-mail'
+                }
+              ]
+            },
+            password: {
+              identifier  : 'password',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your password'
+                },
+                {
+                  type   : 'length[6]',
+                  prompt : 'Your password must be at least 6 characters'
+                }
+              ]
+            }
+          }
+        });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function(){
+$('.username').keyup(function(){
+  this.value = this.value.toLowerCase();
+
+});
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

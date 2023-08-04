@@ -1,0 +1,465 @@
+{% load static %}
+{% load bootstrap5 %}
+ {% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+
+<html lang="en">
+{% block head %}
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Our project just needs Font Awesome Free's Solid + Brand files -->
+        <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <title>{{title|title}} </title>
+    <!-- Custom CSS -->
+          <link href="{% static 'dashboard/css/style.css' %}" rel="stylesheet">
+          <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+          <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+      <style>
+.change:hover{
+    background: transparent;
+    
+}
+
+      </style>  
+      
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Khand:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600&family=PT+Sans+Narrow:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600&family=PT+Sans+Narrow:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600;700&family=PT+Sans+Narrow:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap');
+        .acme{
+    
+          font-family: 'PT Sans Narrow', sans-serif;
+    
+        }
+    
+        .carousel-header{
+          font-family: 'Roboto', sans-serif;
+        }
+    
+        .carousel-p{
+          font-family: 'Mukta', sans-serif;
+          color:gray;
+        }
+    
+        .name{
+          font-family: 'Lato', sans-serif;
+        }
+    
+        .site{
+          font-family: 'Righteous', cursive;
+        }
+    
+        .headings{
+          font-family: 'Quattrocento Sans', sans-serif;
+        }
+    .mul-text{
+      font-family: 'Khand', sans-serif;
+    }
+    
+        .scrolling-active{
+          background:#22243b;
+          box-shadow:0 3px 1rem rgba(0,0,0,.1);
+        }
+
+
+        input{
+            background-color: beige;
+            color:black;
+        }
+
+        .notice{
+
+           font-family: 'Mukta', sans-serif;
+        }
+
+section{
+    color:#ffffff;
+    background:#284b63;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.wallet_details{
+   
+    padding:40px 0;
+}
+
+
+
+
+@media screen and (max-width:500px) {
+    .wallet_details{
+
+        padding:0 20px;
+    }
+   
+}
+        </style>
+        
+
+
+         
+
+        
+          
+         
+</head>
+{% endblock %}
+<body>
+    <nav class="navbar navbar-expand-sm fixed-top" style="background: #232345;color:white;" >
+        <div class="container-fluid">
+          <a class="navbar-brand carousel-header text-capitalize" href="{% url 'home' %}"  style="color: #f5a742;">interquests</a>
+          <button style="border: 2px solid #f5a742;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars text-white"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white carousel-header" href="{% url 'dashboard' %}"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-house fa-flip"></i> Overview
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #232345;">
+                        <li><a class="dropdown-item text-white change carousel-header" href="{%  url 'dashboard' %}"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+                      <li><a class="dropdown-item text-white change carousel-header" href="{%  url 'home' %}"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <!--  <li><a class="dropdown-item text-white change site" href="#"><i class="fa-solid fa-chart-area"></i> Account</a></li>
+            -->
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled site">Features</a>
+                  </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white carousel-header" href="{% url 'dashboard' %}"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-wallet"></i> Wallet
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #232345;">
+<li><a class="dropdown-item text-white change carousel-header" href="{% url 'deposit' %}"> <i class="fa-solid fa-arrow-down"></i> Deposit | Invest</a></li>
+<li><a class="dropdown-item text-white change carousel-header" href="{%  url 'withdraw' %}"><i class="fa-solid fa-arrow-up"></i>  Withdraw</a></li>
+<li><a class="dropdown-item text-white change carousel-header" href="{%  url 'transfers' %}"><i class="fa-solid fa-arrow-right"></i>  Transfer</a></li>
+                    <!--  <li><a class="dropdown-item text-white change site" href="#"><i class="fa-solid fa-chart-area"></i> Account</a></li>
+            -->
+                    </ul>
+                  </li>
+                  
+           
+              <li class="nav-item">
+                <a class="nav-link text-white carousel-header" href="{% url 'transactions' %}"><i class="fa-solid fa-calendar fa-flip"></i> Transaction History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white site" title="Wallet Identity Number" style="cursor:pointer;">{{win}}</a>
+              </li>
+              <!--
+              <li class="nav-item">
+                <a class="nav-link text-white carousel-header" href="#"><i class="fa-solid fa-retweet fa-flip"></i> Referrals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white carousel-header" href="#"><i class="fa-solid fa-link fa-flip"></i> Ref Link</a>
+              </li>
+              -->
+            </ul>
+            <span class="d-flex">
+            
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle text-white carousel-header" href="{% url 'home' %}"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-user"></i> Profile
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #232345;">
+                
+                  <li><a class="dropdown-item text-white changecarousel-header" href="#">{{request.user.username}} | <b class="carousel-p text-uppercase">{{win}}</b></a></li>
+          
+                  <li><a class="dropdown-item text-white change carousel-header" href="#"><i class="fa-solid fa-dollar-sign fa-beat-fade"></i> bal: {{balance}}</a></li>
+                  <li><a class="dropdown-item text-white change carousel-header" href="{% url 'settings' %}"><i class="fa-solid fa-gear fa-spin"></i> Settings</a></li>
+                  <li><a class="dropdown-item text-white change carousel-header"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-right-from-bracket  fa-beat-fade"></i> Logout</a></li>
+                 
+        
+                </ul>
+              </li>
+             
+             
+            </span>
+          </div>
+        </div>
+      </nav>
+    
+ 
+   
+          
+      {% block market_chart %}
+
+            <!-- End Bread crumb -->
+            <!-- Container fluid  -->
+            <div class="container-fluid" style="margin-top: 8em;">
+               
+                    <div class="row">
+                
+                        <div class="col-12">
+                
+                            <div class="crypto-ticker m-b-15">
+                                {% if deserialized %}
+                                 <ul id="webticker-dark-icons">
+                                   {%  for token in deserialized %}
+                                     
+                <li data-update="item1"  class="p-2"  style="background: #232345;color:white;"   ><i class="cc {{token.symbol}} "></i> {{token.symbol}} <span class="coin-value"> <b>${{token.quote.USD.price|floatformat:"2"}}</b></span></li>
+                               {% if pending_transfer %}
+<li data-update="item1"  class="p-2"  style="background: #232345;color:white;">A transfer of {{obj.pending_transfer}} is pending, contact Interquests to receive payment </li>
+                 
+                                {% endif %}
+                                 {% endfor %}
+                                </ul>
+                                   {% endif %}
+                             </div>
+                        </div>
+                    </div>
+              
+           
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-seven">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="cc {{deserialized.0.symbol}}" title={{deserialized.0.symbol}}></i>
+                                        </div>
+                                        <div class="col-5">
+                                            <h3>{{deserialized.0.name}} {{deserialized.0.symbol}}</h3>
+
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <h3>${{deserialized.0.quote.USD.price|floatformat:"2"}}</h3>
+                                            <h6 {% if deserialized.0.quote.USD.percent_change_24h > 0 %} class="text-success" {% else %} class="text-danger"{% endif %}>{{deserialized.0.quote.USD.percent_change_24h|floatformat:"2"}}%<i{% if deserialized.0.quote.USD.percent_change_24h > 0 %} class="ti-arrow-up f-s-16 text-success m-l-5" {% else %} class="ti-arrow-down f-s-16 text-danger m-l-5"{% endif %}></i></h6>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-15">24H Volume
+                                        <span class="peity-btc" data-peity='{ "fill": "rgba(247, 147, 26, 0.5)", "stroke": "#f7931a"}'>{{deserialized.0.quote.USD.volume_24h}}</span>
+                                          
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-seven">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="cc {{deserialized.20.symbol}}" title={{deserialized.20.symbol}}></i>
+                                        </div>
+                                        <div class="col-5">
+                                            <h3>{{deserialized.20.name}}  {{deserialized.20.symbol}}</h3>
+                                            
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <h3>${{deserialized.20.quote.USD.price|floatformat:"2"}}</h3>
+                                           <h6 {% if deserialized.20.quote.USD.percent_change_24h > 0 %} class="text-success" {% else %} class="text-danger"{% endif %}>{{deserialized.20.quote.USD.percent_change_24h|floatformat:"2"}}%<i{% if deserialized.20.quote.USD.percent_change_24h > 0 %} class="ti-arrow-up f-s-16 text-success m-l-5" {% else %} class="ti-arrow-down f-s-16 text-danger m-l-5"{% endif %}></i></h6>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-15">24H Volume
+                                        <span class="peity-ltc" data-peity='{ "fill": "rgba(131, 131, 131, 0.59)", "stroke": "#838383"}'>{{deserialized.20.quote.USD.volume_24h}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-seven">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="cc {{deserialized.8.symbol}}" title={{deserialized.8.symbol}}></i>
+                                        </div>
+                                        <div class="col-5">
+                                            <h3>{{deserialized.8.name}} {{deserialized.8.symbol}}</h3>
+                                            
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <h3>${{deserialized.8.quote.USD.price|floatformat:"2"}}</h3>
+                                    <h6 {% if deserialized.8.quote.USD.percent_change_24h > 0 %} class="text-success" {% else %} class="text-danger"{% endif %}>{{deserialized.8.quote.USD.percent_change_24h|floatformat:"2"}}%<i{% if deserialized.8.quote.USD.percent_change_24h > 0 %} class="ti-arrow-up f-s-16 text-success m-l-5" {% else %} class="ti-arrow-down f-s-16 text-danger m-l-5"{% endif %}></i></h6>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-15">24H Volume
+                                        <span class="peity-neo" data-peity='{ "fill": "rgba(88, 191, 0, 0.59)", "stroke": "#58bf00"}'>{{deserialized.8.quote.USD.volume_24h}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-seven">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="cc {{deserialized.12.symbol}}"></i>
+                                        </div>
+                                        <div class="col-5">
+                                            <h3>{{deserialized.12.name}} {{deserialized.12.symbol}}</h3>
+                                    
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <h3>${{deserialized.12.quote.USD.price|floatformat:"2"}}</h3>
+                                             <h6 {% if deserialized.8.quote.USD.percent_change_24h > 0 %} class="text-success" {% else %} class="text-danger"{% endif %}>{{deserialized.8.quote.USD.percent_change_24h|floatformat:"2"}}%<i{% if deserialized.8.quote.USD.percent_change_24h > 0 %} class="ti-arrow-up f-s-16 text-success m-l-5" {% else %} class="ti-arrow-down f-s-16 text-danger m-l-5"{% endif %}></i></h6>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-15">24H Volume
+                                        <span class="peity-dash" data-peity='{ "fill": "rgba(28, 117, 188, 0.45)", "stroke": "#1c75bc"}'>{{deserialized.12.quote.USD.volume_24h}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-seven">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="cc {{deserialized.1.symbol}}" title={{deserialized.1.symbol}}></i>
+                                        </div>
+                                        <div class="col-5">
+                                            <h3>{{deserialized.1.name}}  {{deserialized.1.symbol}}</h3>
+                                        
+                                        </div>
+                                        <div class="col-5 text-right">
+                                      <h3>${{deserialized.1.quote.USD.price|floatformat:"2"}}</h3>
+                            <h6 {% if deserialized.8.quote.USD.percent_change_24h > 0 %} class="text-success" {% else %} class="text-danger"{% endif %}>{{deserialized.8.quote.USD.percent_change_24h|floatformat:"2"}}%<i{% if deserialized.8.quote.USD.percent_change_24h > 0 %} class="ti-arrow-up f-s-16 text-success m-l-5" {% else %} class="ti-arrow-down f-s-16 text-danger m-l-5"{% endif %}></i></h6>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-15">24H Volume
+                                        <span class="peity-eth" data-peity='{ "fill": "rgba(70, 70, 70, 0.5)", "stroke": "#282828"}'>{{deserialized.1.quote.USD.volume_24h}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-seven">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="cc {{deserialized.5.symbol}}" title={{deserialized.5.symbol}}></i>
+                                        </div>
+                                        <div class="col-5">
+                                            <h3>Ripple {{deserialized.5.symbol}}</h3>
+                                            
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <h3>${{deserialized.5.quote.USD.price|floatformat:"2"}}</h3>
+                                          <h6 {% if deserialized.5.quote.USD.percent_change_24h > 0 %} class="text-success" {% else %} class="text-danger"{% endif %}>{{deserialized.8.quote.USD.percent_change_24h|floatformat:"2"}}%<i{% if deserialized.8.quote.USD.percent_change_24h > 0 %} class="ti-arrow-up f-s-16 text-success m-l-5" {% else %} class="ti-arrow-down f-s-16 text-danger m-l-5"{% endif %}></i></h6>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-15">24H Volume
+                                        <span class="peity-xrp" data-peity='{ "fill": "rgba(52, 106, 169, 0.51)", "stroke": "#346aa9"}'>{{deserialized.5.quote.USD.volume_24h}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%  endblock %}
+                <!-- /# row -->
+
+                {% block trade_history %}
+         
+                {% endblock %}
+
+                {% block sell_order %}
+                
+                {% endblock %}
+                <!-- End PAge Content -->
+            </div>
+        
+  
+    <!-- End Wrapper -->
+
+
+<!-- JavaScript Bundle with Popper -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="{% static 'dashboard/js/lib/jquery/jquery.min.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+    ("#copy").click(function(){
+    
+        alert("Hello world");
+    
+    });
+    
+    
+    
+    });
+      
+    </script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'dashboard/js/lib/bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'dashboard/js/jquery.slimscroll.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'dashboard/js/sidebarmenu.js' %}"></script>
+    <!--stickey kit -->
+    <script src="{% static 'dashboard/js/lib/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'dashboard/js/lib/webticker/jquery.webticker.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/lib/peitychart/jquery.peity.min.js' %}"></script>
+    <!-- scripit init-->
+    <script src="{% static 'dashboard/js/custom.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/dashboard-1.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title site text-dark" id="exampleModalLabel"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;  Logout</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center acme text-danger">
+           <span class="text-danger">
+             <i class="fas fa-sign-out-alt fa-3x mt-4"></i> </span>
+             
+             <div class="mt-4" style="height: 50px;">Are you sure you want to logout?</div>
+          
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm acme" data-bs-dismiss="modal">Cancel</button>
+            <a href="{% url 'logout' %}" type="button" class="btn btn-outline-danger btn-sm acme">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<small class="ps-2">2023 &copy;Interquests</small>
+
+
+</body>
+
+</html>

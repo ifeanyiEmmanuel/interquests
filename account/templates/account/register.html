@@ -1,0 +1,305 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<!--Fontawesome cdn-->
+<link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+  <!-- Semantic ui  styles -->
+  <title> Signup </title>
+  <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/segment.min.css" integrity="sha512-gB76JkasK0JAoGNuCBlOkok1MvhWe+VlcMQev9kU1qdkHaniPRHCOLEX6I8e1RATv/Y8uEhkDENL/ct2446l0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/divider.min.css" integrity="sha512-oVjlQ44wbePOJ4mK1reaPNn45WUnBnieWk5VgVCC15MnZXhu8/F/LkLlhHmwMYJs+B/UK+PyuGlFQPYe02StSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/button.min.css" integrity="sha512-+1Zl+cDrkWiaN4aCOs9XZ12Jm4Lg3OztufLITILSxr3mo5QM3+WgLH6+s+ytIWoWWQcdNlMGn1JHf75TzHvPHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/list.min.css" integrity="sha512-Tat6lTtm97uLVi5uZWwKypcmT4b1wT/k/qoFWDI6aNTYBFGkJyxlkpXFA39iOjYNAsVIlWTlZ2xpzkXtZbI70w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/message.min.css" integrity="sha512-cjnERD52Jzybv22NT1ZzuxP8WXHCotGJLY+Z/mRSUB+KKk4pyHFX2M48owbs3hyaa0ZPyZw99x9orcExrxv/zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/accordion.min.css" integrity="sha512-EW5NoIdxRt4Kx9yB4sh9TKVYOveAOFf8WwjRwQs4ylh1hDueujFGLJtPNjm4zQKwlPk8Q2mYDLte7aK6NS+uoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/dropdown.min.css" integrity="sha512-tdyzfjYDk2OR9L10jvzzuGUB0Rvl5fyMW/Z8yfbYyyENfuXxtcDtEq7d/PdiA0hzQzXjWwvZasjEp8Joli2tkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/reset.min.css" integrity="sha512-4oi+quFCpWrFqNtLmv0A56oLa8Br7PQ//DkMffNgO18cgxjWmVOuyPwZJlTAbpS9SYLDoGAxtg90EsMbjTSqcw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/site.min.css" integrity="sha512-yEmNIS6Qdu0YdnkjO1ESV2WOq8ZrFyUCv11SyHSpiTWNq8wzH9IXV2cpfCoYzVnJ7N6TsWoRolz59B8n4yB0TQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/container.min.css" integrity="sha512-IUhIc6Zv/UBzmK9W+2PBOw2DHH/E0MviFQWNYIqisFosYiBuhtd6CHTHI2Oy+vFpkdjFyV4pDVWOZfAQnZmHew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/grid.min.css" integrity="sha512-Ohj+DnL1EK4rLz1ZmdJ2XkqFUk8QtUKU/z5p0GA11OrkB8b1aEC8083wIapgpP/dj1E+MClxAYdUnmTY3rbFCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/header.min.css" integrity="sha512-GtOUyBaHQA3ECV4UL3DDSPfy0dwqrk0BNqKB/Bgd/aJdeZKIpLbQHvdi6Sp11/PBhYas4HH7KgcTZMwKjL8V2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/image.min.css" integrity="sha512-UyxQPvi+GFBMko3Ngv8JWOwJBcPsMiBLfCOFLtjab7+PEbyZJQzZpCmvDUaTVgmt33Lz1zGJ+R8V6Q6+5vqx8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/input.min.css" integrity="sha512-/2SPb+/ufZ1JxqZtjgwhYh6Eg0/rh9IDNjjfPyhJQEeXGRsi8bu7dpI8i2hoGaK4m8iRMvn2L7vBrAy5MdW76A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/menu.min.css" integrity="sha512-vzV6GDUGaQ3ern46f/02MP4pQhI5Fs4z4dN+0pSNiD4zuPE6Aaxzj9o8ZPTSTIQOBEI3H8wO1V8qV1bQbZcGzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/modal.min.css" integrity="sha512-O+9HCSTa58q6mrPxDvnNqBc7sPkqC7ByndUgWVMa65B5Y0jRztCrdiIZAEmAee/0+oYpyjNQwj0d4qIaLbNJuQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/icon.min.css" integrity="sha512-rTyypI20S663Wq9zrzMSOP1MNPHaYX7+ug5OZ/DTqCDLwRdErCo2W30Hdme3aUzJSvAUap3SmBk0r5j0vRxyGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+ 
+
+  <style type="text/css">
+    body {
+      background-color: #DADADA;
+    }
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+    .errorlist{
+      list-style-type: none !important;
+      color: red !important;
+      text-align: left !important;
+
+    }
+  </style>
+  
+</head>
+<body>
+ <header>
+    <nav class="navbar bavbar-expand-lg navbar-dark bg-dark">
+        <div class="col-sm">
+            <a class="navbar-brand flex-grow-1" id="navbar-content">
+               
+               &nbsp;&nbsp;<i class="text-warning fas fa-chart-pie"></i>&nbsp;&nbsp; Interquests
+               
+            </a>
+        </div>
+         <!-- Link to navigate between the pages -->
+        {% block link %}
+<a href="{% url 'home' %}" style="margin-right:25px; font-size: 25px;" title="Go back">
+<i class="text-warning fas fa-angle-double-left"></i>
+</a>
+        {% endblock link %}
+    </nav>
+</header>
+    
+    
+    
+    
+  
+  
+ <br> <br> 
+
+<div class="ui middle aligned center aligned grid ms-4 me-4 mb-2">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <i class="ui teal fas fa-chart-pie fa-2x"></i> &nbsp; 
+      <div class="content">
+        Interquests 
+      </div>
+    </h2>
+    <form class="ui large form" method="post" id="form">
+      {% csrf_token %}
+      
+      <div class="ui stacked segment">
+        {{ form.non_field_errors }}
+        <div class="field">
+          <label style="text-align: left;">First Name</label>
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            {{form.first_name}}
+          </div>
+          <span class="ui error">{{form.first_name.errors}}</span>
+        </div>
+
+        <div class="field">
+          <label style="text-align: left;">Last Name</label>
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            {{form.last_name}}
+          </div>
+           <span class="ui error">{{form.last_name.errors}}</span>
+        </div>
+        <div class="field">
+          <label style="text-align: left;">Email Address</label>
+          <div class="ui left icon input">
+            <i class="envelope  icon"></i>
+            {{form.email}}
+          </div>
+           <span class="ui error">{{form.email.errors}} </span>
+        </div>
+        <div class="field">
+          <label style="text-align: left;">Username</label>
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            {{form.username}}
+          </div>
+           <span class="ui error">{{form.username.errors}}</span>
+        </div>
+        <div class="field">
+          <label style="text-align: left;">Password</label>
+          <div class="ui left icon input">
+           <i class="lock icon"></i>
+            {{form.password1}}
+          </div>
+           <span class="ui error">{{form.password1.errors}}</span>
+        </div>
+        <div class="field">
+          <label style="text-align: left;">Confirm password</label>
+          <div class="ui left icon input">
+           <i class="lock icon"></i>
+            {{form.password2}}
+          </div>
+          <span class="ui error">{{form.password2.errors}}</span>
+        </div>
+       
+        <div class="ui fluid large teal submit button">Create an Account</div>
+        
+      </div>
+       <small>By creating an account, you agree to INTERQUESTS's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a></small><br>
+        
+
+      <div class="ui error message"></div>
+
+    </form>
+
+    <div class="ui message">
+      New to us? <a href="{% url 'login' %}">Login</a>
+    </div>
+  </div>
+</div>
+<!--jQuery scripts-->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!--Semantic ui scripts-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js" integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/form.min.js" integrity="sha512-g9ZwtsAp0ebsmwlSjsMxeh5nlsmuLeH5eKVMeYnhqrOYWGPm0VAFyxc6l1qCeoHPyST/+tWh+S1yyF+TP6ObCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/transition.min.js" integrity="sha512-TLqXvtXVij90GI++rNVSth9ilrDuyVc07ENJ6M7517r3DEaXjH/nS1klFegVw5Q0l+ZklRTFOhvAOn8avOVwYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function() {
+      $('.ui.form').form({
+          fields: {
+            email: {
+              identifier  : 'email',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your e-mail'
+                },
+                {
+                  type   : 'email',
+                  prompt : 'Please enter a valid e-mail'
+                },
+                 {
+                  type: 'maxLength[80]',
+                  prompt: 'Maximum character for Emaile is 80 Characters'
+
+                }
+              ]
+            },
+
+            first_name :{
+              identifier:'first_name',
+              rules:[
+                {
+                  type:'empty',
+                  prompt:'Please enter your First name'
+                },
+                {
+                  type: 'maxLength[15]',
+                  prompt: 'Maximum character for First name is 15 Characters'
+
+                }
+               
+              ]
+
+            },
+            last_name :{
+              identifier:'last_name',
+              rules:[
+                {
+                  type:'empty',
+                  prompt:'Please enter your Last name'
+                },
+                 {
+                  type: 'maxLength[15]',
+                  prompt: 'Maximum character for Lastname is 15 Characters'
+
+                }
+              ]
+
+            },
+            username:{
+              identifier:'username',
+              rules:[
+                {
+                  type:'empty',
+                  prompt:'Please enter your Username'
+                },
+                 {
+                  type: 'maxLength[15]',
+                  prompt: 'Maximum character for Username is 15 Characters'
+
+                }
+              ]
+            },
+            password1:{
+              identifier:'password1',
+              rules:[
+                {
+                  type:'empty',
+                  prompt:'Please enter your password'
+                },
+                {
+                  type   : 'length[6]',
+                  prompt : 'Your password must be at least 6 characters'
+                },
+              
+              ]
+            },
+            password2:{
+              identifier:'password2',
+              rules:[
+                {
+                  type:'empty',
+                  prompt:'Please confirm your password'
+                },
+                {
+                  type:'length[6]',
+                  prompt:'Your password must be at least 6 characters'
+                }
+              ]
+            }
+           
+          
+          }
+        });
+    });
+  </script>
+  <script>
+  $(document).ready(function(){
+    
+     // 1) prevents numbers in name 
+  $("input[type='text']").keyup(function(){
+   
+  if(!/^[a-zA-Z _]*$/.test(this.value)){
+  this.value = this.value.split(/[^a-zA-Z _]/).join('');
+  }
+
+});
+
+ // 2) Prevent starting with space in all inputs 
+
+ $("input[type='text'], input[type='email'], input[type='password']").on("keypress",function(e){
+        if(e.which === 32 && !this.value.length){
+             e.preventDefault();
+            }
+   });
+
+   /// 2 all input except password is converted to lowercase
+   $("input[type='text'], input[type='email']").keyup(function(){
+        this.value = this.value.toLowerCase();
+
+    });
+
+  });
+
+   </script>
+</body>
+
+</html>

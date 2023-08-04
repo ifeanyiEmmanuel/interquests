@@ -1,0 +1,248 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+ {% load bootstrap5 %}
+ {% bootstrap_css %}
+{% bootstrap_javascript %}
+
+          
+
+
+
+
+
+{% block market_chart %}
+
+<div class="container-fluid" style="margin-top: 8em;">
+               
+  <div class="row">
+
+      <div class="col-12">
+
+          <div class="crypto-ticker m-b-15">
+              {% if deserialized %}
+               <ul id="webticker-dark-icons">
+                 {%  for token in deserialized %}
+                   
+<li data-update="item1"  class="p-2"  style="background: #232345;color:white;"   ><i class="cc {{token.symbol}} "></i> {{token.symbol}} <span class="coin-value"> <b>${{token.quote.USD.price|floatformat:"2"}}</b></span></li>
+               {% endfor %}
+              </ul>
+                 {% endif %}
+           </div>
+      </div>
+  </div>
+
+</div>
+
+
+
+
+
+<div class="container px-4 ">
+  <div class="row gx-5">
+    <div class="col-md-3">
+      <div class="p-3 mb-2  fs-6 rounded"  style="background: #232345;color:white;"><i class="fa-solid fa-arrow-up-9-1"></i>Pending Withdraw: <b class="float-end">{{pending}}</b></div>
+  </div>
+    <div class="col-md-3"> 
+        <div class="p-3 mb-2 fs-6 rounded" style="background: #232345;color:white;"><i class="fa-solid fa-wallet"></i>  Wallet Balance: <b class="float-end"> {{balance}}</b></div>
+        </div>
+    <div class="col-md-3"> 
+        <div class="p-3 mb-2 fs-6 rounded" style="background: #232345;color:white;"><i class="fa-solid fa-percent"></i> Profit: <b class="float-end">{{profit}}</b></div>
+        </div>
+        <div class="col-md-3">
+        <div class="p-3 mb-2  fs-6 rounded"  style="background: #232345;color:white;"><i class="fa-solid fa-wallet"></i> Total Balance:  <b class="float-end">{{total}}</b></div>
+        </div>
+     
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row ">
+    <div class="col d-flex justify-content-center">
+
+    <div class="card  shadow-lg p-3 mb-5 bg-body rounded w-100">
+  <div class="card-body">
+    {% if not pending %}
+  <h4 class="card-title site" style="color: #f5a742;">Withdraw</h4><hr>
+   
+
+   <form method="post" class="form">
+  
+  {% csrf_token %}
+{% bootstrap_form form %}
+<h5 class="site text-info" >Notice:</h5>
+<ul>
+  <li class="text-dark notice lh-lg"><i class="fa-solid fa-arrow-right"></i> We will process your withdrawal in 30 minutes,it depends on the blockchain when the assets would be finally transferred to your wallet.</li>
+  <li class="text-dark notice lh-lg"><i class="fa-solid fa-arrow-right"></i> To enhance the security of your assets, the large amount of withdrawal might be manually processed, please wait patiently.</li>
+</ul>
+{% if not get_obj.restriction %}
+  {% buttons %}
+  <div class="d-grid gap-2">
+    <button type="submit" class="btn btn-outline-success" style="background:#232345;color: white;">
+  Withdraw
+    </button>
+  </div>
+  {% endbuttons %}
+ 
+ 
+    </form>
+
+    {% else %}
+ {% buttons %}
+  <div class="d-grid gap-2">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ErrorMessage" style="background:#232345;color: white;">
+  Withdraw
+</button>
+  </div>
+  {% endbuttons %}
+
+ {% endif %}
+
+
+
+
+
+
+    <div class="d-grid gap-2">
+      <a class="btn btn-outline-info btn-flat m-b-30 m-t-30 mt-2" href="{% url 'dashboard' %}">
+    Back to Dashboard
+      </a>
+  </div>
+{% else %}
+<!--end of the other withdrawal p art-->
+<h4 class="card-title site" style="color: #f5a742;">Withdrawal Processing...</h4><hr>
+   
+<p  class="text-dark carousel-p fw-bolder">Withdrawal Amount <span class="float-end">{{pending}}</span></p>
+<hr>
+<p  class="text-dark carousel-p fw-bolder">Withdrawal Address:</p>
+
+<p  class="text-success name"><span class="text-wrap fw-bolder">{{wallet_address}}</span></p>
+
+{% if messages %}
+
+{% for message in messages %}
+
+
+{% if message.tags == 'success' %}
+<script src="{% static 'js/jquery.js' %}"></script>  
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+ $(document).ready(function(){
+  $("#myMessage").modal('show');
+ });
+</script>
+
+{% endif %}
+
+
+    
+{% endfor %}
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="d-grid gap-2">
+   <a class="btn btn-outline-info btn-flat m-b-30 m-t-30 mt-2" href="{% url 'dashboard' %}">
+ Back to Dashboard
+   </a>
+</div>
+{% endif %}
+<!--end of the other withdrawal p art-->
+  </div>
+</div>
+</div>
+</div>
+
+
+<!--modal-->
+<div class="modal fade" id="myMessage" tabindex="-1" aria-labelledby="myMessageLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark site" id="myMessageLabel">Perfect!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="text-center text-success mt-3">
+        <i class="far fa-check-circle fa-6x" style="color: #a5dc86;"></i>
+        </div>
+        <br>
+        <div class="mb-3 text-dark carousel-p ">Withdrawal successfully received,you would be notified the moment it is processed. Thanks</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" style="width:65px;" data-bs-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ErrorMessage" tabindex="-1" aria-labelledby="ErrorMessageLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger site" id="exampleModalLabel"> <i class="fa-solid fa-triangle-exclamation fa-bounce"></i> Account Restricted</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<p class="carousel-p text-dark fs-5"> Oops!!! Your Account needs a migration and an IBPC before your total withdrawal can be processed. Need further help? <a  class="text-decoration-none" href="mailto:info@interquests.com">Contact Us</a></p>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+ {% block trade_history %}
+
+ {% if get_obj %}
+
+
+{%  include 'dashboard/history.html' with props=get_obj   %}
+
+{% endif %}
+
+{% endblock %}
+
+
+{% block sell_order %}
+
+
+  
+{% endblock %}
+
+
+
+
+
+

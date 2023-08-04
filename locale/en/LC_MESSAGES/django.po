@@ -1,0 +1,336 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-24 02:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\mywebsite\settings.py:283
+msgid "German"
+msgstr ""
+
+#: .\mywebsite\settings.py:284
+msgid "French"
+msgstr ""
+
+#: .\mywebsite\settings.py:285
+msgid "English"
+msgstr ""
+
+#: .\mywebsite\settings.py:286
+msgid "Spanish"
+msgstr ""
+
+#: .\mywebsite\urls.py:22
+msgid "admin/"
+msgstr ""
+
+#: .\mywebsite\views.py:28 .\templates\homepage.html:320
+#: .\templates\homepage.html:1481
+msgid "Home"
+msgstr ""
+
+#: .\mywebsite\views.py:53
+msgid "home"
+msgstr ""
+
+#: .\templates\homepage.html:324
+msgid "Testimonies"
+msgstr ""
+
+#: .\templates\homepage.html:332
+msgid "Select Language"
+msgstr ""
+
+#: .\templates\homepage.html:345
+msgid "Payment Proof"
+msgstr ""
+
+#: .\templates\homepage.html:349
+msgid "Support"
+msgstr ""
+
+#: .\templates\homepage.html:352 .\templates\homepage.html:1508
+#: .\templates\homepage.html:1514
+msgid "Contact Us"
+msgstr ""
+
+#: .\templates\homepage.html:357 .\templates\homepage.html:394
+msgid "Dashboard"
+msgstr ""
+
+#: .\templates\homepage.html:358 .\templates\homepage.html:395
+msgid "Logout"
+msgstr ""
+
+#: .\templates\homepage.html:360 .\templates\homepage.html:397
+#: .\templates\homepage.html:418 .\templates\homepage.html:440
+msgid "Login"
+msgstr ""
+
+#: .\templates\homepage.html:361 .\templates\homepage.html:398
+#: .\templates\homepage.html:419 .\templates\homepage.html:441
+msgid "Sign Up"
+msgstr ""
+
+#: .\templates\homepage.html:383
+msgid "Your Revolutionary"
+msgstr ""
+
+#: .\templates\homepage.html:383
+msgid "Bitcoin Investment"
+msgstr ""
+
+#: .\templates\homepage.html:385
+msgid ""
+"\n"
+"          We offer three reliable investment plans.\n"
+"          Also you can earn more profit by refering your friend, and "
+"family.\n"
+"          No investment required, can get up to "
+msgstr ""
+
+#: .\templates\homepage.html:388
+msgid ""
+"ref comissions.what are you waiting for ? create a free account and start "
+"refering the world.\n"
+"          "
+msgstr ""
+
+#: .\templates\homepage.html:406 .\templates\homepage.html:428
+msgid "Your Revolutionary <br>Bitcoin Investment"
+msgstr ""
+
+#: .\templates\homepage.html:408
+msgid ""
+" interquests is a private investment company incorporated in the UK.\n"
+"          Our team consists of professionals at all levels of the "
+"blockchain.\n"
+"          The main business involves cryptocurrency mining and intelligent "
+"automated trading,\n"
+"          bringing stable and efficient revenue to our global customers,\n"
+"          interquests's company registration number 69590835.. "
+msgstr ""
+
+#: .\templates\homepage.html:415 .\templates\homepage.html:437
+msgid "Dashboard<"
+msgstr ""
+
+#: .\templates\homepage.html:416 .\templates\homepage.html:438
+msgid " Logout"
+msgstr ""
+
+#: .\templates\homepage.html:429
+msgid ""
+"Welcome to interquests.com\n"
+"          interquests.com is a online investment platform,We're a legally "
+"company registered in the  Wales,United Kingdom\n"
+"          We are experienced team with high qualification and efficiency,\n"
+"          provided for an investment service focus on the Bitcoin trading "
+"market\n"
+"         interquests.com helps you earn stable and fast profit online\n"
+"          Don't delay! Join interquests Now! "
+msgstr ""
+
+#: .\templates\homepage.html:494
+msgid "About Us"
+msgstr ""
+
+#: .\templates\homepage.html:516
+msgid "Read more"
+msgstr ""
+
+#: .\templates\homepage.html:538
+msgid "investment plan"
+msgstr ""
+
+#: .\templates\homepage.html:581
+msgid "roi Daily"
+msgstr ""
+
+#: .\templates\homepage.html:583
+msgid "Min-Deposit:"
+msgstr ""
+
+#: .\templates\homepage.html:584
+msgid "Max-Deposit:"
+msgstr ""
+
+#: .\templates\homepage.html:585
+msgid "Ref-Commission:"
+msgstr ""
+
+#: .\templates\homepage.html:586
+msgid "Instant Payment:"
+msgstr ""
+
+#: .\templates\homepage.html:587
+msgid "Withdrawal Period:"
+msgstr ""
+
+#: .\templates\homepage.html:593
+msgid "Account"
+msgstr ""
+
+#: .\templates\homepage.html:639
+msgid "percentage"
+msgstr ""
+
+#: .\templates\homepage.html:641
+msgid "Total percentage MIN"
+msgstr ""
+
+#: .\templates\homepage.html:645
+msgid "earnings"
+msgstr ""
+
+#: .\templates\homepage.html:658
+msgid "Choose a Plan"
+msgstr ""
+
+#: .\templates\homepage.html:659
+msgid "after 24Hours"
+msgstr ""
+
+#: .\templates\homepage.html:660
+msgid "after 48Hours "
+msgstr ""
+
+#: .\templates\homepage.html:661
+msgid "after  72Hours "
+msgstr ""
+
+#: .\templates\homepage.html:662
+msgid "after 120Hours "
+msgstr ""
+
+#: .\templates\homepage.html:700
+msgid "Our Investment"
+msgstr ""
+
+#: .\templates\homepage.html:703
+msgid "Statistics"
+msgstr ""
+
+#: .\templates\homepage.html:717
+msgid "Running Days"
+msgstr ""
+
+#: .\templates\homepage.html:733
+msgid "Total Deposits"
+msgstr ""
+
+#: .\templates\homepage.html:749
+msgid "Total Withdraw"
+msgstr ""
+
+#: .\templates\homepage.html:764
+msgid "Total Accounts"
+msgstr ""
+
+#: .\templates\homepage.html:922
+msgid "Latest Deposits"
+msgstr ""
+
+#: .\templates\homepage.html:1099
+msgid "Latest Withdrawals "
+msgstr ""
+
+#: .\templates\homepage.html:1288
+msgid "Our advantage"
+msgstr ""
+
+#: .\templates\homepage.html:1307
+msgid "customer feedback"
+msgstr ""
+
+#: .\templates\homepage.html:1310
+msgid "WHAT OUR CLIENT SAYS"
+msgstr ""
+
+#: .\templates\homepage.html:1392
+msgid "Top Investors"
+msgstr ""
+
+#: .\templates\homepage.html:1399 .\templates\homepage.html:1420
+#: .\templates\homepage.html:1439 .\templates\homepage.html:1457
+msgid "More Info"
+msgstr ""
+
+#: .\templates\homepage.html:1414
+msgid "last investors"
+msgstr ""
+
+#: .\templates\homepage.html:1433
+msgid "investors stats"
+msgstr ""
+
+#: .\templates\homepage.html:1450
+msgid "last withdrawals"
+msgstr ""
+
+#: .\templates\homepage.html:1473
+msgid ""
+"\n"
+"  The Company\n"
+"INTERQUESTS is a private investment company incorporated in Wales.The main "
+"business involves cryptocurrency mining and intelligent automated trading, "
+"bringing stable and efficient revenue to our global customers.\n"
+"        "
+msgstr ""
+
+#: .\templates\homepage.html:1479
+msgid "Quick Links"
+msgstr ""
+
+#: .\templates\homepage.html:1482
+msgid "About"
+msgstr ""
+
+#: .\templates\homepage.html:1489
+msgid "Buy Bitcoins"
+msgstr ""
+
+#: .\templates\homepage.html:1501
+msgid "Help"
+msgstr ""
+
+#: .\templates\homepage.html:1516
+msgid ""
+"\n"
+"          Phone Only For Vip\n"
+"\n"
+"          admin@interquests.com\n"
+"          \n"
+"          411 Oxford Street, Office 1.01,\n"
+"          \n"
+"          London, England,\n"
+"          \n"
+"          W1C 2PE\n"
+"        "
+msgstr ""
+
+#: .\templates\homepage.html:1561
+msgid "All rights reserved."
+msgstr ""
+
+#: .\templates\homepage.html:1563
+msgid "Terms & Conditions"
+msgstr ""
+
+#: .\templates\homepage.html:1563
+msgid "Privacy Policy"
+msgstr ""

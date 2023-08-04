@@ -1,0 +1,106 @@
+{% extends 'homepage.html' %}
+{% load static %}
+
+{% block carousel %}
+
+
+{% endblock %}
+
+{% block center %}
+
+<div class="container-fluid bg-dark p-5">
+
+<div class="container-fluid mt-5 bg-dark">
+    <h3 class="ui header text-center text-white fs-4"> BOUNTY <b class="lead text-success fs-4">PROGRAM<b> </h3>
+        <p><b class="text-white">It requires just some of your free time to complete a small task and earn up to 0.5 BTC.</b></p>
+        </div>
+
+<div class="container mt-5 bg-dark">
+    <p class="text-white">For validating entries and submissions for our bounty campaign, we will need to verify that all steps have been followed as we required in each one of our Forms, and somehow helps with adding value to ultimatewealth.org
+        In order to filter spammy submissions we will only consider submissions from trustworty members, want to become one? Read below.</p>
+        <h1 class="text-success">BECOME A TRUSTWORTHY MEMBER - DO AT LEAST (2).</h1>
+        <ul type="none">
+            <li class="text-white fs-6">Create your account in ultimatewealth.org <a class="text-decoration-none" href="https://epenetus.herokuapp.com/accounts/signup">https://epenetus.herokuapp.com/acccounts/signup</a></li>
+            <li class="text-white fs-6">Don't do a submission if you haven't followed the rules.</li>
+        </ul>
+</div>
+
+<div class="container mt-5">
+
+
+
+
+
+
+    {% for bounty in bounties %}
+
+
+
+
+
+
+
+
+<div class="parent mt-5">
+
+    <div class="child-one {{bounty.my_class}}" style="background:{{bounty.background_color}};"> <h2 class="text-white p-3">{{bounty.heading}}</h2>
+
+        <p class="fs-6 fw-bolder">{{bounty.sub_heading}}</p>
+   
+    </div>
+
+    <div class="child-two">
+        <ul class="pt-3">
+            {% for rewards in bounty.reward_set.all %}
+        <li class="fs-6 lh-lg">{{rewards.requirements}}</li>
+        {% endfor %}
+
+        </ul>
+
+
+    </div>
+</div>
+
+
+
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+{% endblock %}
+
+{% block stats %}
+
+{% endblock %}
+{% block security %}
+
+{% endblock %}
+ 
+
+{% block investment %}
+
+{% endblock %}
+
+{% block withdrawals %}
+
+{% endblock %}

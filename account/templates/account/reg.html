@@ -1,0 +1,84 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block menu %}
+
+{% endblock %}
+
+{% block carousel %}
+
+{% endblock %}
+
+
+{% block center %}
+{% load bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+<div  style="background-color: #DADADA;" class="p-4">
+  <div class="ui middle aligned center aligned grid mt-2 mb-2 p-2">
+  <div class="column">
+   
+    <h2 class="ui teal image header">
+      <img src="{% static 'images/favicon.ico' %}" class="image"> 
+      <div class="content">
+        Create account
+      </div>
+    </h2>
+  </div>
+</div>
+<div class="container mb-5">
+ 
+  <div class="row">
+    <div class="col-sm d-flex justify-content-center">
+
+      <form  method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input type="submit" class="ui fluid large teal submit button mb-2" value="Create Account">
+        <small>By creating an account, you agree to INTERQUESTS's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a></small><br>
+        <small>
+          Already have an account? <a href="{% url 'login' %}"> Sign-In</a></small>
+       
+      </form>
+      
+
+    </div>
+    
+  </div>
+</div>
+
+</div>
+
+{# Display a form #}
+{% endblock %}
+
+{% block security %}
+
+{% endblock %}
+
+{% block stats %}
+
+{% endblock %}
+
+{% block investment %}
+
+{% endblock %}
+
+{% block crypto %}
+
+{% endblock %}
+
+{% block more-info %} 
+
+{% endblock %}
+{% block withdrawals %}
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

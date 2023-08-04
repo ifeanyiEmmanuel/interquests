@@ -1,0 +1,139 @@
+{% extends 'homepage.html' %}
+{% load static %}
+
+
+
+{% block carousel %}
+
+
+{% endblock %}
+
+
+{% block center %}
+<div class="container-fluid bg-dark p-5">
+  <h4 class="text-success text-uppercase fs-3 text-center p-3 site"><img src="{% static 'images/heading-arrow.png' %}" class="mb-4">FAQ</h4>
+  <div class="container p-5" style="background-color: whitesmoke;">
+    <div class="row">
+      <div class="col">
+        <div class="ui list">
+          {% if not faq %}
+          <p class="card-text placeholder-glow">
+            <span class="placeholder col-7"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-6"></span>
+            <span class="placeholder col-8"></span>
+          </p>
+
+          {% else %}   
+
+          {% for obj in faq %}
+          <div class="item">
+           
+            <div class="right floated content">
+              <div class="ui button show{{obj.id}}">show</div>
+            </div>
+
+            <a class="header">{{obj.question}}</a>
+
+            {% for ans in obj.answer_set.all %}
+            <div class="description{{obj.id}} mt-2">
+           {% autoescape off %}  {{ans.answer}} {% endautoescape %}
+            </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+
+          {% endif%}
+       
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+
+      $(".description1").hide();
+      $(".show1").click(function(){
+        $(".description1").slideToggle(100);
+
+      });
+
+
+      $(".description2").hide();
+      $(".show2").click(function(){
+        $(".description2").slideToggle(100);
+
+      });
+      $(".description3").hide();
+      $(".show3").click(function(){
+        $(".description3").slideToggle(100);
+
+      });
+      $(".description4").hide();
+      $(".show4").click(function(){
+        $(".description4").slideToggle(100);
+
+      });
+
+      $(".description5").hide();
+      $(".show5").click(function(){
+        $(".description5").slideToggle(100);
+
+      });
+
+      $(".description6").hide();
+      $(".show6").click(function(){
+        $(".description6").slideToggle(100);
+
+      });
+
+      $(".description7").hide();
+      $(".show7").click(function(){
+        $(".description7").slideToggle(100);
+
+      });
+      $(".description8").hide();
+      $(".show8").click(function(){
+        $(".description8").slideToggle(100);
+
+      });
+
+      $(".description9").hide();
+      $(".show9").click(function(){
+        $(".description9").slideToggle(100);
+
+      });
+     
+    });
+  </script>
+ 
+
+
+</div>
+
+{% endblock %}
+
+{% block faq %}
+
+
+
+{% endblock %}
+
+{% block stats %}
+
+
+{% endblock %}
+
+{% block security %}
+
+{% endblock %}
+
+{% block investment %}
+
+{% endblock %}
+
+{% block withdrawals %}
+
+{% endblock %}

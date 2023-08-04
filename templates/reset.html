@@ -1,0 +1,48 @@
+{% extends 'admin.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container">
+   
+    <div class="row">
+      <div class="col-md-8 ">
+ <ul class="tabs" data-tabs id="example-tabs">
+   <li class="tabs-title is-active text-uppercase text-decoration-none fs-5"><a href="#panel1" aria-selected="true" class="text-decoration-none fw-bolder">Approve Deposits</a></li>
+   <li class="tabs-title text-uppercase"><a data-tabs-target="panel2" href="#panel2" class="text-decoration-none fw-bolder">Empty</a></li>
+        </ul>
+
+        
+        <div class="tabs-content" data-tabs-content="example-tabs">
+          <div class="tabs-panel is-active" id="panel1">
+            <h4 class="site p-2 text-center"> Pending Deposit</h4>
+            <div class="ui middle aligned divided list">
+            
+              {% for obj in pending_list %}
+         
+              <div class="item">
+                <div class="right floated content">
+                  <div class="ui  pink inverted button disabled text-dark">{{obj.notification_deposit}}</div>
+                </div>
+                <img class="ui avatar image" src="{% static 'images/molly.png' %}">
+                <div class="content">
+                <a href="{% url 'reset_detail' obj.accountUser_id %}" class="site text-decoration-none">{{obj.accountUser}}</a>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            </div>
+          <div class="tabs-panel" id="panel2">
+            <h4 class="site p-2 text-center">Empty</h4>
+            <div class="ui placeholder">
+                <div class="header">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+              </div>
+            </div>
+            </div>
+ </div>
+    
+    </div>
+  </div>  
+  {% endblock  %}

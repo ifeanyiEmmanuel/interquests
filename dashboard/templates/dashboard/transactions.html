@@ -1,0 +1,60 @@
+{% extends  'dashboard/index.html' %}
+
+
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block head %}
+<head>
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <title>ACMETradingBot | Transactions</title>
+    <!-- Custom CSS -->
+          <link href="{% static 'dashboard/css/style.css' %}" rel="stylesheet">
+         
+</head>
+{% endblock %}
+
+ {% block breadcrumb %}
+  <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-primary">Dashboard</h3> </div>
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                         <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Transactions</li>
+                        
+                    </ol>
+                </div>
+            </div>
+ {% endblock %}
+ {% block tab %}
+ 
+   {% endblock %}
+   {% block market_chart %}
+{%  include 'dashboard/history.html' with props=get_obj   %}
+    {% endblock %}
+
+{% block trade_history %}
+
+
+
+{% endblock %}
+
+
+  {% block sell_order %}
+
+
+  {% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'detail.html' %}
+
+
+{% block head %}
+<h1 style="color: #f5a742;" class="text-center headings mb-4">Add Investor's Earnings</h1>
+
+{% endblock %}
+
+{% block users %}
+<div class="container">
+  <div class="row">
+
+    <div class="col d-flex justify-content-center">
+      <div class="d-grid gap-2">
+        <a class="btn btn-outline-info btn-flat m-b-30 m-t-30 mt-2" href="{% url 'profit' %}">
+      Back to Users
+        </a>
+    </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
