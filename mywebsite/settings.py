@@ -30,8 +30,8 @@ SECRET_KEY = 'django-insecure-t_lc6bi*#1+t@^3&ulzs*)5mt$hs7yin33g4odkhaz1rc-tk(+
 DEBUG = True
 
 #ALLOWED_HOSTS = ['wwww.interquests.com','interquests.com','web-production-6428.up.railway.app','localhost']
-#ALLOWED_HOSTS = ['www.interquests.com','interquests.com','web-production-6428.up.railway.app','localhost','127.0.0.1']
-ALLOWED_HOSTS = ['www.interquests.com','interquests.com','interquests-994f18ec12eb.herokuapp.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['www.interquests.com','interquests.com','web-production-9dc1.up.railway.app','localhost','127.0.0.1']
+#ALLOWED_HOSTS = ['www.interquests.com','interquests.com','interquests-994f18ec12eb.herokuapp.com','localhost','127.0.0.1']
 #ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 
