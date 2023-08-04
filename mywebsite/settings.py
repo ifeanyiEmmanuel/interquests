@@ -337,3 +337,9 @@ CURRENCY_CHOICES = [('USD', 'US Dollar')]
 #CSRF_TRUSTED_ORIGINS = ['https://www.interquests.com','https://interquests.com']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#5bzd47ii.up.railway.app
+
+
+CSRF_TRUSTED_ORIGINS = ['https://www.interquests.com','https://interquests.com','https://web-production-9dc1.up.railway.app']
