@@ -62,7 +62,7 @@ class Crypto_logo(models.Model):
 class Feedback(models.Model):
     name=models.CharField(max_length=150)
     image=models.ImageField(upload_to="images/")
-    testimony=models.TextField(max_length=250)
+    testimony=models.TextField(max_length=5000)
     country=models.CharField(max_length=250)
 
     def __str__(self):
