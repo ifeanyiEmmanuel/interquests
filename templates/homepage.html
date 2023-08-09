@@ -1362,7 +1362,7 @@
           </div>
 
         {% else %}
-        {% for feed in feed %}
+        {% for feeds in feed %}
         <div class="ms-3 me-2 mb-2">
 
           <div class="ui link cards ">
@@ -1371,12 +1371,12 @@
                 <img src="{{feed.image.url}}">
               </div>
               <div class="content">
-                <div class="header text-success">{{feed.name|title}}</div>
+                <div class="header text-success">{{feeds.name|title}}</div>
                 <div class="meta">
-                  <a>{{feed.country|title}}</a>
+                  <a>{{feeds.country|title}}</a>
                 </div>
                 <div class="description">
-                <p class="lh-base carousel-p">{{feed.testimony}}</p>
+                <p class="lh-base carousel-p">{{feeds.testimony}}</p>
                 </div>
               </div>
               
@@ -1488,8 +1488,9 @@
         <div class="three wide column  headings">
   {% blocktrans %}
   The Company
-INTERQUESTS is a private investment company incorporated in England. The main business involves cryptocurrency mining and intelligent automated trading, bringing stable and efficient revenue to our global customers.
-        {% endblocktrans %}
+INTERQUESTS is a private investment company incorporated in USA. 
+The main business involves cryptocurrency mining and intelligent automated trading,bringing stable and efficient revenue to our global customers.
+  {% endblocktrans %}
 </div>
         <div class="three wide column">
           <h4 class="ui invertednkk  header" style="color: #f5a742;">{% translate "Quick Links" %}</h4>
@@ -1538,11 +1539,7 @@ INTERQUESTS is a private investment company incorporated in England. The main bu
           contact@interquests.com <a href="mailto:contact@interquests.com" class="text-warning">Send email</a>
           <br>
           
-          411 Oxford Street, Office 1.01,
-          
-          London, England,
-          
-          W1C 2PE
+          United States of America
         {% endblocktrans %}
         </p>
         </div>
@@ -1619,7 +1616,7 @@ INTERQUESTS is a private investment company incorporated in England. The main bu
                <small>{% if messages %}
                 <ul class="messages">
                     {% for message in messages %}
-                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    <li {% if message.tags and if message.tags == 'success' %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
                     {% endfor %}
                 </ul>
                 {% endif %}</small>
