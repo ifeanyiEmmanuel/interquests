@@ -1,0 +1,41 @@
+{% extends "modal/base.html" %}
+
+
+<!-- class dialog -->
+
+{% block modal-dialog %}
+    class="modal-dialog modal-xl"
+{% endblock modal-dialog %}
+
+
+<!--Modal title -->
+{% block modal-title %}
+<i class="fa-solid fa-arrows-rotate"></i> &nbsp; Investor's Earnings
+{% endblock modal-title %}
+
+
+<!-- Modal id -->
+
+
+{% block modal-id %}
+id="resetDepositModal"
+{% endblock modal-id %}
+
+
+
+<!--Modal body -->
+{% block modal-body %}
+{% load static %}
+<div class="container" style="width: 95%;">
+<div class="justify-content-center align-items-center row mt-3">
+    <h6 class="btn btn-secondary btn-lg text-sm mb-4" style="width: 100%; cursor: default;">
+        <strong>
+            <i class="fa-solid fa-coins"></i> &nbsp; Investor's Earnings
+        </strong>
+           </h6>
+
+
+</div>
+</div>
+{% endblock modal-body %}
+

@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'fontawesomefree',
     'rosetta',
+    'django_cleanup.apps.CleanupConfig',
    # 'currencies',
     
 ]
@@ -112,7 +113,7 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 
 
 
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -135,7 +136,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-"""
+
 
 
 

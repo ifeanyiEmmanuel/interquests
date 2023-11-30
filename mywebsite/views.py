@@ -62,7 +62,7 @@ def admin_dashboard(request):
     if request.user.is_authenticated and request.user.is_staff:
         pending_list =Dashboard.objects.all()
         
-        template_name="admin.html"
+        template_name="backend.html"
     else:
         return HttpResponseRedirect(reverse('home'))
 
@@ -207,15 +207,16 @@ def pending_withdrawal(request,id):
 @login_required
 def investor_earnings(request):
     
+    
     if request.user.is_authenticated and request.user.is_staff:
 
-        list_of_users=Dashboard.objects.all()
+        pending_list = Dashboard.objects.all()
         template_name="profit.html"
 
     else:
         return HttpResponseRedirect(reverse('home'))
    
-    context={"list_of_users":list_of_users}
+    context={"pending_list":pending_list}
     return render(request,template_name,context)
 
 
@@ -225,6 +226,7 @@ def add_profit(request,id):
     button="Add"
     button2 = 'Add'
     title="Add Earnings"
+    activity ="profit"
     obj = get_object_or_404(Dashboard,accountUser=id)
     if request.user.is_authenticated and request.user.is_staff:
         form=ProfitForm(request.POST or None,instance=obj)
@@ -234,6 +236,8 @@ def add_profit(request,id):
             item.profit=F('profit')+amount
             item.save(update_fields=['profit'])
             form=ProfitForm()
+            text=f"Profit added successfullly"
+            messages.success(request,text)
         
 
            
@@ -241,7 +245,7 @@ def add_profit(request,id):
         
     else:
         return HttpResponseRedirect(reverse('home'))
-    context={"form":form,"button":button,"title":title,'button2':button2}
+    context={"form":form,"button":button,"title":title,'button2':button2,"activity":activity,"obj":obj}
    
     return render(request,template_name,context)
    
