@@ -421,6 +421,10 @@ def custom_message(request):
     inbox = Contact.objects.all()
     count = inbox.count()
     unread = Contact.objects.filter(Situation="Unread").count()
+    unread_inbox = Contact.objects.filter(Situation="Unread")
+ 
+
+   
     print(unread)
-    context ={"count":count,"unread":unread}
+    context ={"count":count,"unread":unread,"inbox":inbox,"unread_inbox": unread_inbox}
     return render(request,template_name,context)

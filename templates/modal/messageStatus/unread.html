@@ -1,0 +1,79 @@
+{% extends "modal/messageStatus/base.html" %}
+
+
+
+<!-- class dialog -->
+
+{% block modal-dialog %}
+    class="modal-dialog modal-xl"
+{% endblock modal-dialog %}
+
+
+<!--Modal title -->
+{% block modal-title %}
+<button type="button" class="btn btn-primary rounded">
+  Notifications <span class="badge badge-light p-2">{% if unread %} {{unread}} {% else %} 0 {% endif %}</span>
+</button>
+{% endblock modal-title %}
+
+
+<!-- Modal id -->
+
+
+{% block modal-id %}
+id="unreadMessagesModal"
+{% endblock modal-id %}
+       
+
+
+<!--Modal body -->
+{% block modal-body %}
+{% load static %}
+<div class="container" style="width: 95%;">
+<div class="justify-content-center align-items-center row mt-3">
+    <h6 class="btn btn-secondary btn-lg text-sm mb-4" style="width: 100%; cursor: default;">
+        <strong>
+          <i class="fas fa-bell"></i> &nbsp; {% if unread %} <strong class="text-light">{{unread}}</strong> {% else %} <strong class="text-danger">0</strong>  {% endif %} &nbsp; Unread message(s)   </strong>
+  
+
+              </h6>
+              <div class=" mt-4 table-responsive">
+                <table class="table table-striped message-table ">
+                  <thead>
+                    <tr>
+                     
+                      <th scope="col">Date</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Subject</th>
+                      <th scope="col">status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for msg in  unread_inbox %}
+                    <tr>
+                      
+                      <td class="fw-bold">{{msg.date}}</td>
+                      <td class="fw-bold">{{msg.email}}</td>
+                      <td class="fw-bold">{{msg.subject}}</td>
+                      
+                       <td class="text-danger fw-bold">{{msg.Situation}}</td>
+                    
+                      
+                    </tr>
+                    {% endfor %}
+                 
+                  </tbody>
+                </table>
+               </div>
+              
+  
+
+        
+         
+            </div>
+         
+            
+
+</div>
+{% endblock modal-body %}
+

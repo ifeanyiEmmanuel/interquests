@@ -1,0 +1,65 @@
+{% extends "modal/messageStatus/base.html" %}
+
+
+
+<!-- class dialog -->
+
+{% block modal-dialog %}
+    class="modal-dialog modal-xl"
+{% endblock modal-dialog %}
+
+
+<!--Modal title -->
+{% block modal-title %}
+<i class="fa-solid fa-circle-dollar-to-slot"></i> &nbsp; All Inbox
+{% endblock modal-title %}
+
+
+<!-- Modal id -->
+
+
+{% block modal-id %}
+id="totalMessagesModal"
+{% endblock modal-id %}
+
+
+
+<!--Modal body -->
+{% block modal-body %}
+{% load static %}
+<div class="container" style="width: 95%;">
+<div class="justify-content-center align-items-center row mt-3">
+    <h6 class="btn btn-secondary btn-lg text-sm mb-4" style="width: 100%; cursor: default;">
+        <strong>
+            <i class="fa-solid fa-circle-dollar-to-slot"></i> &nbsp; Restrict withdrawal
+        </strong>
+           </h6>
+  
+
+        
+            <h4 class="site p-2 text-center">Restrict center</h4>
+            <div class="tabs-panel is-active" id="panel1">
+                
+                <div class="ui middle aligned divided list">
+                
+                  {% for obj in pending_list %}
+             
+                  <div class="item mb-3">
+                    <div class="right floated content">
+                      <div class="ui  pink inverted button disabled text-dark">{% if obj.restriction %}Restricted{% else %}Unrestricted{% endif %}</div>
+                    </div>
+                    <img class="ui avatar image" src="{% static 'images/molly.png' %}">
+                    <div class="content">
+                    <a href="{% url 'restrict_withdrawal' obj.accountUser_id %}" class="site text-decoration-none">{{obj.accountUser}}</a>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                </div>
+            </div>
+         
+            
+
+</div>
+{% endblock modal-body %}
+

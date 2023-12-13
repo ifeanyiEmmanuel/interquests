@@ -100,6 +100,14 @@ font-family: 'Khand', sans-serif;
   background-color: red;
 }
 
+.message-table{
+  border-spacing: 20px !important;
+}
+.message-table > td{
+  font-size: 30px;
+  font-weight: bold;
+}
+
 {% endblock style %}
 </style>
  
@@ -253,6 +261,10 @@ font-family: 'Khand', sans-serif;
 
 <!--Modal message-->
 {% include "modal/confirm.html" %}
+
+<!--inbox status-->
+{% include "modal/messageStatus/totalMessages.html" %}
+{% include "modal/messageStatus/unread.html" %}
 
 
 
