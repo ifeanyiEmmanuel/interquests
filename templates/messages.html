@@ -1,8 +1,25 @@
 {% extends "backend.html" %}
 
+ {% block navbar-brand %}
+ <a class="text-light  mt-2" id="btn-nav"  title="Unread Messages">
+  <i class="fas fa-bell"></i>
+  <span class="pending">{% if unread %} {{unread}} {% else %} 0 {% endif %} </span>
+ </a>
+ <a class="text-light mt-2" id="btn-nav"  title="Total Messages">
+  <i class="fas fa-envelope"></i>
+  <span class="total">{% if count %} {{count}} {% else %} 0 {% endif %}</span>
+ </a>
+
+ {% endblock navbar-brand %}
+
  {% block container-title %}
-<i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Messages
-{% endblock container-title %}
+ <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Inbox
+ {% endblock container-title %}
+   
+
+
+
+
 
 {% block sidebar-logo %}
 <center class="mt-5">

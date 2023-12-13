@@ -17,6 +17,7 @@ from  requests import Session,Request
 import json
 from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
+from contact.models import Contact
 
 
 def index(request):
@@ -58,6 +59,8 @@ def translate(language):
 
 @login_required
 def admin_dashboard(request):
+    count = Contact.objects.all().count()
+    
     title="Admin Dashboard"
     if request.user.is_authenticated and request.user.is_staff:
         pending_list =Dashboard.objects.all()
@@ -67,7 +70,7 @@ def admin_dashboard(request):
         return HttpResponseRedirect(reverse('home'))
 
 
-    context={"pending_list":pending_list,"title":title}
+    context={"pending_list":pending_list,"title":title,"count":count}
     return render(request,template_name,context)
   
 
@@ -415,4 +418,9 @@ def pending_transfer_detail(request,id):
 
 def custom_message(request):
     template_name ="messages.html"
-    return render(request,template_name)
+    inbox = Contact.objects.all()
+    count = inbox.count()
+    unread = Contact.objects.filter(Situation="Unread").count()
+    print(unread)
+    context ={"count":count,"unread":unread}
+    return render(request,template_name,context)

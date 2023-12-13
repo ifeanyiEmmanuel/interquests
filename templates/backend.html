@@ -75,7 +75,30 @@ font-family: 'Khand', sans-serif;
     background:#22243b;
     box-shadow:0 3px 1rem rgba(0,0,0,.1);
   }
+#btn-nav{
+  float: right;
+  font-size: 20px;
+}
 
+.total, .pending{
+  position: absolute;
+  border-radius: 50px;
+  font-size: 13px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: -32px;
+}
+
+.total{
+  margin-left:14px;
+  background-color: #007bff;
+}
+.pending{
+  margin-left:10px;
+  background-color: red;
+}
 
 {% endblock style %}
 </style>
@@ -87,6 +110,10 @@ font-family: 'Khand', sans-serif;
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Interquests</a>
+        {% block navbar-brand %}
+       
+        {% endblock navbar-brand %}
+        
         <a href="{% url 'home' %}" style="margin-right: 25px; font-size: 25px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasRight">
           <i class="text-light fas fa-bars"></i>
           </a>
@@ -127,6 +154,7 @@ font-family: 'Khand', sans-serif;
       </span>
 
       <div class="justify-content-center align-items-center row mt-3">
+
         <h6 class="btn btn-secondary btn-lg text-sm" style="width: 100%; cursor: default;">
           <strong>
             {% block container-title %}
@@ -134,6 +162,7 @@ font-family: 'Khand', sans-serif;
             {% endblock container-title %}
           </strong>
              </h6>
+             
     {% block content %}
              <!-- Card -->
     <div class="card border-dark mt-3 rounded">
@@ -194,7 +223,7 @@ font-family: 'Khand', sans-serif;
             
             
             <i class="fa-solid fa-envelope fa-7x"></i><br><br>
-            &nbsp;Messages &nbsp; <span class="badge text-bg-danger fs-6">4</span>
+            &nbsp;Messages &nbsp; <span class="badge text-bg-danger fs-6">{% if count %} {{count}} {% else %} 0 {% endif %}</span>
           </a>
           </div>
         </div>
