@@ -1,6 +1,6 @@
 {% extends "modal/base.html" %}
 
-
+{% load static %}
 <!-- class dialog -->
 
 {% block modal-dialog %}
@@ -25,7 +25,7 @@ id="pendingDepositModal"
 
 <!--Modal body -->
 {% block modal-body %}
-{% load static %}
+
 <div class="container" style="width: 95%;">
 <div class="justify-content-center align-items-center row mt-3">
     <h6 class="btn btn-secondary btn-lg text-sm mb-4" style="width: 100%; cursor: default;">
@@ -75,8 +75,7 @@ id="pendingDepositModal"
                   {% endfor %}
                 </div>
                 </div>
-            
-              </div>
+          </div>
 
 </div>
 </div>

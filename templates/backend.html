@@ -13,6 +13,23 @@
   <!--Semantic-ui link-->
 <link rel="stylesheet" type="text/css" href="{% static 'css/semantic.min.css' %}">
 <style>
+
+html,body{
+    height: 100%;
+    margin: 0;
+    max-width: 100%; 
+    
+}
+
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 {% block style %}
 
   @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
@@ -144,7 +161,7 @@ font-family: 'Khand', sans-serif;
         <!--Second card-->
         <div class="col-xl-3 col-sm-6 col-6 p-1">
           <div class="card" style="background-color: transparent;">
-          <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#resetDepositModal">
+          <button class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#resetDepositModal">
             <i class="fa-solid fa-arrows-rotate fa-7x"></i><br><br>
      
             Reset deposits
@@ -154,17 +171,17 @@ font-family: 'Khand', sans-serif;
         <!--Third card-->
         <div class="col-xl-3 col-sm-6 col-6 p-1">
           <div class="card" style="background-color: transparent;">
-          <button class="btn btn-warning btn-lg">
+          <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#resetRestrictWithdrawalModal">
             <i class="fa-solid fa-circle-dollar-to-slot fa-7x"></i><br><br>
    
-            Restrict I withdrawal
+            Restrict withdrawal
           </button>
           </div>
         </div>
         <!--fourth card-->
         <div class="col-xl-3 col-sm-6 col-6 p-1">
           <div class="card" style="background-color: transparent;">
-          <button class="btn btn-danger btn-lg">
+          <button class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#pendingTransferModal">
             <i class="fa-solid fa-money-bill-transfer fa-7x"></i><br><br>
             Pending transfer
           </button>
@@ -173,11 +190,12 @@ font-family: 'Khand', sans-serif;
         <!--fifth card-->
         <div class="col-xl-3 col-sm-6 col-6 p-1">
           <div class="card" style="background-color: transparent;">
-          <button class="btn btn-secondary btn-lg">
+          <a href="{% url 'messages' %}" class="btn btn-primary btn-lg">
+            
             
             <i class="fa-solid fa-envelope fa-7x"></i><br><br>
-            Messages
-          </button>
+            &nbsp;Messages &nbsp; <span class="badge text-bg-danger fs-6">4</span>
+          </a>
           </div>
         </div>
        
@@ -189,11 +207,36 @@ font-family: 'Khand', sans-serif;
 
     </div>
 
+<footer class="bg-dark text-center text-lg-start" id="footer" style="color: #fff;">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">&copy; {% now "Y" %} Copyright
+        <a class="text-center" href="#" style="text-decoration: none;">
+            <span class="text-warning mmm">wwww.interquests.com</span>
+        </a>
+    </div>
+</footer>    
+
     <!--Modals -->
 {% include "modal/pending_deposits.html" %}
 {% include "modal/investorEarning.html" %}
 {% include "modal/resetDeposit.html" %}
+{% include "modal/restrictWithdrawal.html" %}
+{% include "modal/pendingTransfer.html" %}
+
+<!--Modal message-->
 {% include "modal/confirm.html" %}
+
+
+
+<script>
+  $(document).ready(function(){
+      jQuery("#offcanvasDarkNavbar, .offcanvas-body a").click(function(){
+  console.log($(this).attr('href'));
+  jQuery('.offcanvas').offcanvas('hide');
+      });
+  
+  });
+  </script>
+ 
 
     <!--Jquery cdn link-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -207,7 +250,6 @@ font-family: 'Khand', sans-serif;
 <script src="{% static 'js/foundation.js' %}"></script>
 <script src="{% static 'js/app.js' %}"></script>
 <!--Semantic ui js-->
-
 <script src="{% static  'js/semantic.min.js' %}"></script> 
   </body>
 </html>

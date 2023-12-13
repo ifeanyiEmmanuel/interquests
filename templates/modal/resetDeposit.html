@@ -1,6 +1,6 @@
 {% extends "modal/base.html" %}
 
-
+{% load static %}
 <!-- class dialog -->
 
 {% block modal-dialog %}
@@ -10,7 +10,7 @@
 
 <!--Modal title -->
 {% block modal-title %}
-<i class="fa-solid fa-arrows-rotate"></i> &nbsp; Investor's Earnings
+<i class="fa-solid fa-arrows-rotate"></i> &nbsp; Reset Pending Deposit
 {% endblock modal-title %}
 
 
@@ -25,17 +25,47 @@ id="resetDepositModal"
 
 <!--Modal body -->
 {% block modal-body %}
-{% load static %}
+
 <div class="container" style="width: 95%;">
 <div class="justify-content-center align-items-center row mt-3">
     <h6 class="btn btn-secondary btn-lg text-sm mb-4" style="width: 100%; cursor: default;">
         <strong>
-            <i class="fa-solid fa-coins"></i> &nbsp; Investor's Earnings
+            <i class="fa-solid fa-coins"></i> &nbsp; Reset pending Deposit
         </strong>
            </h6>
+
+           
+
+         
+            
+                  <h4 class="site p-2 text-center">Reset pending Deposit</h4>
+                  <div class="ui middle aligned divided list">
+                  
+                    {% for obj in pending_list %}
+               
+                    <div class="item">
+                      <div class="right floated content">
+                        <div class="ui  pink inverted button disabled text-dark">{{obj.notification_deposit}}</div>
+                      </div>
+                      <img class="ui avatar image" src="{% static 'images/molly.png' %}">
+                      <div class="content">
+                      <a href="{% url 'reset_detail' obj.accountUser_id %}" class="site text-decoration-none">{{obj.accountUser}}</a>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                
+               
+            
+
+
+
+
+
 
 
 </div>
 </div>
 {% endblock modal-body %}
 
+      <!---->

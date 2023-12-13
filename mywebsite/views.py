@@ -255,6 +255,7 @@ def add_profit(request,id):
 @login_required
 def reset(request):
     title="Reset"
+    
     if request.user.is_authenticated and request.user.is_staff:
         pending_list=Dashboard.objects.all()
         template_name="reset.html"
@@ -268,6 +269,7 @@ def reset(request):
 
 @login_required
 def reset_detail(request,id):
+    activity = "Reset"
     title="Reset Pending deposit"
     button="Clear"
     button2='Clear'
@@ -280,14 +282,17 @@ def reset_detail(request,id):
             item.pending_deposit=F('pending_deposit')-amount
             item.notification_deposit=0
             item.save(update_fields=['pending_deposit','notification_deposit'])
-            return HttpResponseRedirect(reverse('reset'))
+            text=f"Profit added successfullly"
+            messages.success(request,text)
+            form =DepositForm()
+            #return HttpResponseRedirect(reverse('reset'))
     
             
         template_name="reset-detail.html"
         pass
     else:
         return HttpResponseRedirect(reverse('home'))
-    context={"title":title,"form":form,"button":button,"obj":obj,'button2':button2}
+    context={"title":title,"form":form,"button":button,"obj":obj,'button2':button2,"activity":activity}
     return render(request,template_name,context)
 
 
@@ -309,6 +314,7 @@ def restrict_withdrawal_list(request):
 
 @login_required
 def restrict_withdrawal(request,id):
+    activity = "Restriction"
     button='Restrict'
     button2='Unrestrict'
     title="Restrict Withdrawal"
@@ -318,17 +324,14 @@ def restrict_withdrawal(request,id):
         if form.is_valid():
             item=form.save(commit=False)
             item.save(update_fields=['restriction'])
-            
-
-            
-            
-            
-            
-            return HttpResponseRedirect(reverse('restrict'))
+            text=f"confirmed"
+            messages.success(request,text)
+            #form = RestrictForm()
+            #return HttpResponseRedirect(reverse('restrict'))
         template_name='restrict-detail.html'
     else:
         return HttpResponseRedirect(reverse('home'))
-    context = {'title':title,'form':form,'obj':obj,'button':button,'button2':button2}
+    context = {'title':title,'form':form,'obj':obj,'button':button,'button2':button2,"activity":activity}
     return render(request,template_name,context)
 
     
@@ -353,6 +356,7 @@ def pending_transfer(request):
 
 
 def pending_transfer_detail(request,id):
+    activity = "Transfer Restriction"
     title =" Confirm Pending Transfers "
     button ='Confirm transfer'
     button2 ='Transfer confirmed'
@@ -404,8 +408,11 @@ def pending_transfer_detail(request,id):
         template_name = 'pending_transfer_details.html'
     else:
         return HttpResponseRedirect(reverse('home'))
-    context = {"button":button,'button2':button2,'title':title,'form':form,"obj":obj}
+    context = {"button":button,'button2':button2,'title':title,'form':form,"obj":obj,"activity":activity}
     return render(request,template_name,context)
 
 
 
+def custom_message(request):
+    template_name ="messages.html"
+    return render(request,template_name)

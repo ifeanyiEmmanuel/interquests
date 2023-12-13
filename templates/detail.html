@@ -30,7 +30,7 @@
       <li class="breadcrumb-item active" aria-current="page">{{activity}}</li>
     </ol>
   </nav>
-
+{% block description %}
   <h6 class="btn btn-outline-secondary btn-lg text-sm mt-4 mb-4" style="width: 50%; cursor: default;">
     <strong>
      
@@ -38,7 +38,7 @@
     
     </strong>
        </h6>
-
+{% endblock description %}
     
       
         <div class="justify-content-center align-items-center row mt-3">
@@ -50,6 +50,8 @@
             {% bootstrap_form form %}
             
              {% buttons %}
+
+             {% block button %}
              <div class="d-grid gap-2">
                <button type="submit" class="btn btn-outline-success btn-flat m-b-30 m-t-30 mt-2">
                {% if obj.restriction %}
@@ -60,8 +62,16 @@
                {% endif %}
                </button>
                </div>
+
+               {% endblock button %}
+               
              {% endbuttons %}    
            </form>
+<hr><br><br><br>
+           <div class="d-grid gap-2">
+            <a href="{% url 'admin_dashboard' %}" class="btn btn-outline-secondary">Back to C Panel</a>
+           </div>
+         
       </div>
       </div>
 
