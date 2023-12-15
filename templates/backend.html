@@ -21,14 +21,44 @@ html,body{
     
 }
 
+/*======================================
+# FOOTER
+====================================*/
 
-#footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+.wrapper{
+    min-height: 100%;
+    margin-bottom: -5px;
 }
+
+#footer,
+.push{
+    height: 50px;
+}
+/*======================================
+#  RESPONSIVE MODES
+====================================*/
+/* Resolution for Tablets */
+@media screen and (max-width: 1024px) {
+    #footer{
+        font-size: 15px;
+    }       
+}
+
+@media screen and (max-width:575px) {
+    #footer{
+        font-size: 12px;
+    }
+
+    body{
+        overflow-y: visible !important;
+    }
+
+   
+
+
+
+}
+
 
 {% block style %}
 
@@ -41,7 +71,9 @@ html,body{
     @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600&family=PT+Sans+Narrow:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600&family=PT+Sans+Narrow:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600;700&family=PT+Sans+Narrow:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap');
-  .acme{
+  
+  
+    .acme{
 
     font-family: 'PT Sans Narrow', sans-serif;
 
@@ -155,7 +187,7 @@ font-family: 'Khand', sans-serif;
 
 
     <!--div container-->
-
+<div class="wrapper">
     <div class="container mt-4"  style="width: 95%;">
       <span style="margin-left: -10px;">
         Welcome: &nbsp; &nbsp;  <strong><span class="text-primary">{{user.get_full_name | title}}</span></strong>
@@ -208,10 +240,10 @@ font-family: 'Khand', sans-serif;
         <!--Third card-->
         <div class="col-xl-3 col-sm-6 col-6 p-1">
           <div class="card" style="background-color: transparent;">
-          <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#resetRestrictWithdrawalModal">
+          <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#resetRestrictWithdrawalModal" title="Restrict Withdrawal">
             <i class="fa-solid fa-circle-dollar-to-slot fa-7x"></i><br><br>
    
-            Restrict withdrawal
+            R. Withdrawal
           </button>
           </div>
         </div>
@@ -243,6 +275,8 @@ font-family: 'Khand', sans-serif;
  </div>
 
     </div>
+    </div>
+    <!--End of wrapper-->
 
 <footer class="bg-dark text-center text-lg-start" id="footer" style="color: #fff;">
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">&copy; {% now "Y" %} Copyright

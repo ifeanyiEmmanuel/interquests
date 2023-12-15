@@ -49,7 +49,7 @@ id="pendingDepositModal"
                   <div class="right floated content">
                     <div class="ui  pink inverted button disabled text-dark">{{obj.notification_deposit}}</div>
                   </div>
-                  <img class="ui avatar image" src="{% static 'images/molly.png' %}">
+                  
                   <div class="content">
                   <a href="{% url 'admin_detail' obj.accountUser_id %}" class="site text-decoration-none">{{obj.accountUser}}</a>
                   </div>
@@ -67,7 +67,7 @@ id="pendingDepositModal"
                     <div class="right floated content">
                       <div class="ui  pink inverted button disabled text-dark">{{obj.notification_withdrawal}}</div>
                     </div>
-                    <img class="ui avatar image" src="{% static 'images/molly.png' %}">
+                    
                     <div class="content">
                     <a href="{% url 'pending_withdrawal' obj.accountUser_id %}" class="site text-decoration-none">{{obj.accountUser}}</a>
                     </div>

@@ -45,9 +45,9 @@ id="resetRestrictWithdrawalModal"
              
                   <div class="item mb-3">
                     <div class="right floated content">
-                      <div class="ui  pink inverted button disabled text-dark">{% if obj.restriction %}Restricted{% else %}Unrestricted{% endif %}</div>
+                      <div class="ui  pink inverted button disabled text-dark">{% if obj.restriction %}True{% else %}False{% endif %}</div>
                     </div>
-                    <img class="ui avatar image" src="{% static 'images/molly.png' %}">
+                    
                     <div class="content">
                     <a href="{% url 'restrict_withdrawal' obj.accountUser_id %}" class="site text-decoration-none">{{obj.accountUser}}</a>
                     </div>
