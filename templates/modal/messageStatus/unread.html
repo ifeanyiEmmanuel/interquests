@@ -38,6 +38,7 @@ id="unreadMessagesModal"
 
               </h6>
               <div class=" mt-4 table-responsive">
+                {% if  unread_inbox %}
                 <table class="table table-striped message-table ">
                   <thead>
                     <tr>
@@ -64,6 +65,32 @@ id="unreadMessagesModal"
                  
                   </tbody>
                 </table>
+
+
+                {% else %}
+                <table class="table table-striped message-table ">
+                  <thead>
+                    <tr>
+                     
+                      <th scope="col">Date</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Subject</th>
+                      <th scope="col">status</th>
+                    </tr>
+                  </thead>
+
+                  </table>
+
+                  <p class="placeholder-glow">
+                    <span class="placeholder col-12"></span>
+                    <span class="placeholder col-12"></span>
+                    <span class="placeholder col-12"></span>
+                    <span class="placeholder col-12"></span>
+                  </p>
+
+
+
+                {% endif %}
                </div>
               
   

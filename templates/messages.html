@@ -5,7 +5,7 @@
   <i class="fas fa-bell"></i>
   <span class="pending">{% if unread %} {{unread}} {% else %} 0 {% endif %} </span>
  </a>
- <a class="text-light mt-2" id="btn-nav"  title="Total Messages" href="#">
+ <a class="text-light mt-2" id="btn-nav"  title="Total Messages" href="{% url 'messages' %}">
   <i class="fas fa-envelope"></i>
   <span class="total">{% if count %} {{count}} {% else %} 0 {% endif %}</span>
  </a>
@@ -41,7 +41,9 @@
 
  {% block content %} 
  <div class=" mt-4 table-responsive">
+{% if inbox %}
   <table class="table table-striped message-table ">
+    
     <thead>
       <tr>
        
@@ -53,6 +55,7 @@
     </thead>
     <tbody>
       {% for msg in inbox %}
+     
       <tr>
         
         <td class="fw-bold">{{msg.date}}</td>
@@ -66,9 +69,45 @@
        
         
       </tr>
+    
+
+
+    
       {% endfor %}
+
+
+      
    
     </tbody>
   </table>
- </div>
+
+{% else %}
+<table class="table table-striped message-table ">
+    
+  <thead>
+    <tr>
+     
+      <th scope="col">Date</th>
+      <th scope="col">Email</th>
+      <th scope="col">Subject</th>
+      <th scope="col">status</th>
+    </tr>
+  </thead>
+  
+
+
+
+</table>
+<p class="placeholder-glow">
+  <span class="placeholder col-12"></span>
+  <span class="placeholder col-12"></span>
+  <span class="placeholder col-12"></span>
+  <span class="placeholder col-12"></span>
+</p>
+</div>
+
+{% endif %}
+
+
+  
  {% endblock content %}
