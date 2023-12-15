@@ -33,6 +33,7 @@ urlpatterns = [
     path('contact/',include("contact.urls")),
     path('accounts/login',CustomLoginView.as_view(),name="login"),
     path('messages/',views.custom_message,name="messages"),
+    path('messages/<int:id>/',views.message_detail,name="message_detail"),
     #path('accounts/change-password/',auth_views.PasswordChangeView.as_view(),name="password_change" ),
     #path('accounts/password_change/done/',auth_views.PasswordChangeDoneView.as_view(),name='password_change_done'),
     
@@ -67,6 +68,7 @@ urlpatterns +=  i18n_patterns(
     path('contact/',include("contact.urls")),
     path('accounts/login',CustomLoginView.as_view(),name="login"),
     path('messages/',views.custom_message,name="messages"),
+     path('messages/<int:id>/',views.message_detail,name="message_detail"),
     #path('accounts/change-password/',auth_views.PasswordChangeView.as_view(),name="password_change" ),
     #path('accounts/password_change/done/',auth_views.PasswordChangeDoneView.as_view(),name='password_change_done'),
     

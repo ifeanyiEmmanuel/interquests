@@ -18,6 +18,8 @@ import json
 from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
 from contact.models import Contact
+from contact.forms import MessageForm
+from django.contrib.admin.views.decorators import staff_member_required
 
 
 def index(request):
@@ -58,6 +60,7 @@ def translate(language):
 
 
 @login_required
+@staff_member_required
 def admin_dashboard(request):
     count = Contact.objects.all().count()
     
@@ -78,6 +81,7 @@ def admin_dashboard(request):
 
 
 @login_required
+@staff_member_required
 def admin_detail(request,id):
     title="Confirm Deposit"
     obj = get_object_or_404(Dashboard,accountUser=id)
@@ -140,6 +144,7 @@ def admin_detail(request,id):
 
  
 @login_required
+@staff_member_required
 def pending_withdrawal(request,id):
     title="Confirm Withdrawal"
     obj = get_object_or_404(Dashboard,accountUser=id)
@@ -208,6 +213,7 @@ def pending_withdrawal(request,id):
 
 
 @login_required
+@staff_member_required
 def investor_earnings(request):
     
     
@@ -225,6 +231,7 @@ def investor_earnings(request):
 
 
 @login_required
+@staff_member_required
 def add_profit(request,id):
     button="Add"
     button2 = 'Add'
@@ -256,6 +263,7 @@ def add_profit(request,id):
 
 
 @login_required
+@staff_member_required
 def reset(request):
     title="Reset"
     
@@ -271,6 +279,7 @@ def reset(request):
 
 
 @login_required
+@staff_member_required
 def reset_detail(request,id):
     activity = "Reset"
     title="Reset Pending deposit"
@@ -302,6 +311,7 @@ def reset_detail(request,id):
 
 
 @login_required
+@staff_member_required
 def restrict_withdrawal_list(request):
     title="Restrict"
     if request.user.is_authenticated and request.user.is_staff:
@@ -316,6 +326,7 @@ def restrict_withdrawal_list(request):
 
 
 @login_required
+@staff_member_required
 def restrict_withdrawal(request,id):
     activity = "Restriction"
     button='Restrict'
@@ -343,7 +354,8 @@ def restrict_withdrawal(request,id):
 
 
 from dashboard.forms import PendingTransferForm
-
+@login_required
+@staff_member_required
 def pending_transfer(request):
     title="Confirm pending transfer"
     if request.user.is_authenticated and request.user.is_staff:
@@ -357,7 +369,8 @@ def pending_transfer(request):
     
 
 
-
+@login_required
+@staff_member_required
 def pending_transfer_detail(request,id):
     activity = "Transfer Restriction"
     title =" Confirm Pending Transfers "
@@ -415,7 +428,8 @@ def pending_transfer_detail(request,id):
     return render(request,template_name,context)
 
 
-
+@login_required
+@staff_member_required
 def custom_message(request):
     template_name ="messages.html"
     inbox = Contact.objects.all()
@@ -425,6 +439,20 @@ def custom_message(request):
  
 
    
-    print(unread)
+    
     context ={"count":count,"unread":unread,"inbox":inbox,"unread_inbox": unread_inbox}
+    return render(request,template_name,context)
+
+@login_required
+@staff_member_required
+def message_detail(request,id):
+    msg = get_object_or_404(Contact,id=id)
+    form = MessageForm(request.POST or None,instance=msg)
+    if form.is_valid():
+        form.save()
+
+        return HttpResponseRedirect(reverse('messages'))
+
+    template_name ="messageDetail.html"
+    context = {"msg":msg,"form":form}
     return render(request,template_name,context)

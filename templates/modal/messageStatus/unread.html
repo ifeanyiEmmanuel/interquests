@@ -39,14 +39,15 @@ id="unreadMessagesModal"
               </h6>
               <div class=" mt-4 table-responsive">
                 {% if  unread_inbox %}
-                <table class="table table-striped message-table ">
+                <table class="ui celled table ">
                   <thead>
                     <tr>
                      
                       <th scope="col">Date</th>
                       <th scope="col">Email</th>
                       <th scope="col">Subject</th>
-                      <th scope="col">status</th>
+                      <th scope="col">Status</th>
+                       <th scope="col" colspan="2" style="text-align: center;">Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -56,8 +57,11 @@ id="unreadMessagesModal"
                       <td class="fw-bold">{{msg.date}}</td>
                       <td class="fw-bold">{{msg.email}}</td>
                       <td class="fw-bold">{{msg.subject}}</td>
+                      <td class="text-danger fw-bold">{{msg.Situation}}</td>
+                      <td class="fw-bold" style="text-align: center;"><a href="{% url 'message_detail' msg.id %}"><i class="fa-solid fa-eye "></i></a></td>
+          <td class="fw-bold" style="text-align: center;"><a href="#"><i class="fa-solid fa-trash text-danger "></i></a></td>
                       
-                       <td class="text-danger fw-bold">{{msg.Situation}}</td>
+                       
                     
                       
                     </tr>
@@ -68,14 +72,15 @@ id="unreadMessagesModal"
 
 
                 {% else %}
-                <table class="table table-striped message-table ">
+                <table class="ui celled table ">
                   <thead>
                     <tr>
                      
                       <th scope="col">Date</th>
                       <th scope="col">Email</th>
                       <th scope="col">Subject</th>
-                      <th scope="col">status</th>
+                      <th scope="col">Status</th>
+                       <th scope="col" colspan="2" style="text-align: center;">Action</th>
                     </tr>
                   </thead>
 
