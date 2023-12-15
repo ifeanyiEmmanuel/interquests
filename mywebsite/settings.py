@@ -113,15 +113,16 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 
 
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'db6gb6kgn8r6lb',
-        'USER':'ewrlvhbjwnvqix',
-        'PASSWORD':'ad7299d1d86cf99adfba3f6613d302f0ec5f4baecaedde111a9671b7391d49ee',
-        'HOST':'ec2-34-236-103-63.compute-1.amazonaws.com',
-        'PORT':'5432'
+        'NAME':'interquests',
+        'USER':'iifeanyi570',
+        'PASSWORD':'tNSMID60VjQT',
+        'HOST':'ep-quiet-moon-07501745.us-east-2.aws.neon.tech',
+        'PORT':'5432',
+        'OPTIONS': {'sslmode': 'require'},
 
     }
 }
@@ -136,7 +137,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+"""
 
 
 
