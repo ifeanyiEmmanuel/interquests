@@ -42,7 +42,7 @@
  {% block content %} 
  <div class=" mt-4 table-responsive">
 {% if inbox %}
-  <table class="ui celled table  ">
+  <table class="table  ">
     
     <thead>
       <tr>
@@ -59,7 +59,7 @@
      
       <tr>
         
-        <td class="fw-bold">{{msg.date}}</td>
+        <td class="fw-bold">{{msg.date | date:"jS,M, y"}}</td>
         <td class="fw-bold">{{msg.email}}</td>
         <td class="fw-bold">{{msg.subject}}</td>
         {% if msg.Situation == "Unread" %}
